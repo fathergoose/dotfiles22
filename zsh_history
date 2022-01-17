@@ -1,0 +1,2026 @@
+: 1636046918:0;git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"\
+
+: 1636046918:0;setopt EXTENDED_GLOB\
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do\
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"\
+done\
+
+: 1635906648:0;mkdir code
+: 1635906689:0;mv code Code
+: 1635906713:0;cd Code
+: 1635906805:0;cd ../Code
+: 1635906935:0;mkdir delivery_first
+: 1635907248:0;vim .zshrc
+: 1635907343:0;brew
+: 1635907373:0;brew install --HEAD neovim
+: 1635953757:0;git 
+: 1635953798:0;xcode-select --install\
+
+: 1635977393:0;ssh-keygen -t ed25519 -C "al@ilseman.com"\
+
+: 1635977488:0;pbcopy < ~/.ssh/id_ed25519.pub
+: 1635977530:0;cat ~/.ssh/id_ed25519.pub
+: 1635977535:0;ls .ssh
+: 1635977591:0;ssh -T git@github.com\
+
+: 1635978758:0;npm config get prefix
+: 1635978837:0;sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+: 1635978846:0;npm install -g n
+: 1635978926:0;ls -la /usr/local/n
+: 1635978929:0;ls -la /usr/local/
+: 1635978963:0;sudo chown -R $(whoami)  /usr/local/
+: 1635978968:0;sudo chown -R $(whoami)  /usr/local
+: 1635978983:0;whoami
+: 1635979431:0;mkdir ~/.npm-global
+: 1635979455:0;npm config set prefix '~/.npm-global'
+: 1635979466:0;vim .profile
+: 1635979602:0;npm
+: 1635979612:0;npm uninstall n
+: 1635979695:0;ls /usr/local/lib
+: 1635979699:0;ls /usr/local/lib/node_modules
+: 1635979707:0;rm -rf  /usr/local/lib/node_modules/n
+: 1635979717:0;rm -rf  /usr/local/bin/n
+: 1635979726:0;ls /usr/local/share
+: 1635979730:0;ls /usr/local/share/doc
+: 1635979734:0;ls /usr/local/share/man
+: 1635979740:0;ls /usr/local/share/man/man1
+: 1635979747:0;ls /usr/local/share/doc/node/
+: 1635979754:0;npm install n
+: 1635979779:0;npm install n -g
+: 1635979787:0;rm package*
+: 1635979809:0;ls .node
+: 1635979819:0;ls .npm
+: 1635979825:0;ls .npm-global
+: 1635979829:0;ls .npm-global/bin
+: 1635979934:0;mkdir .n
+: 1635980015:0;n -version
+: 1635980021:0;n --version
+: 1635980148:0;/usr/sbin/softwareupdate --install-rosetta --agree-to-license\
+
+: 1635980227:0;n 10
+: 1635980257:0;which n
+: 1635980297:0;ls .n/bin
+: 1635980303:0;ls .n/n
+: 1635980307:0;ls .n/n/versions
+: 1635980908:0;ls /Users/alexanderilseman/.npm-global/bin
+: 1635980931:0;ls .n
+: 1635980981:0;node --version
+: 1635980994:0;ls /usr
+: 1635981001:0;ls /usr/bin
+: 1635981022:0;/usr/local/bin
+: 1635981092:0;ls -la  /usr/local/bin
+: 1635981133:0;mv Downloads/mongodb-macos-x86_64-5.0.3/bin/* /usr/local/bin
+: 1635981160:0;ls /usr/local/bin
+: 1635981190:0;rm /usr/local/bin/{install_compass,mongo,mongod,mongos}
+: 1635981317:0;/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+: 1635981359:0;echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/alexanderilseman/.zprofile\
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+: 1635981387:0;brew tap mongodb/brew
+: 1635981394:0;brew install mongodb-community@5.0
+: 1636038145:0;cd Documents/deliveryfirst-live
+: 1636038178:0;mongorestore
+: 1636038278:0;brew services start mongodb-community@5.0
+: 1636038315:0;mongorestore --db=deliveryfirst .
+: 1636038372:0;brew install --cask mongodb-compass
+: 1636041679:0;git checkout DFA-35
+: 1636041705:0;git checkout origin/DFA-35/manual_report_generation
+: 1636041895:0;brew install --HEAD luajit\
+
+: 1636041947:0;brew install --HEAD neovim\
+
+: 1636042253:0;cd nvim-osx64
+: 1636042258:0;./bin/nvim
+: 1636042354:0;brew install neovim
+: 1636042377:0;cd -2
+: 1636042413:0;~/.zprofile
+: 1636042417:0;nvim ~/.zprofile
+: 1636042516:0;which nvim
+: 1636042594:0;npm uninstall objects-to-csv
+: 1636042771:0;git add reporting/reportPipeline.js
+: 1636042783:0;git commit -m 'remove unnecessary pkgs'
+: 1636042868:0;git config --global --edit
+: 1636042897:0;git commit --amend --reset-author
+: 1636042911:0;git config --global user.name fathergoose
+: 1636042922:0;git config --global user.email al@ilseman.com
+: 1636042954:0;git commit -m 'remove packages'
+: 1636042967:0;git pull origin DFA-35/manual_report_generation
+: 1636042994:0;git checkout DFA-35/manual_report_generation
+: 1636043045:0;git branch DFA-16/report_automation 91bea5a
+: 1636043052:0;git checkout DFA-16/report_automation
+: 1636043145:0;mkdir reporting/reports
+: 1636045818:0;/width
+: 1636046266:0;defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false\
+
+: 1636046519:0;vim reporting/reports
+: 1636046573:0;rm -rf reports.zip
+: 1636046598:0;cd modules
+: 1636046602:0;cd git
+: 1636046693:0;vim ..
+: 1636046948:0;alias
+: 1636046956:0;alias | grep show
+: 1636046972:0;gcs
+: 1636046987:0;alias | grep status
+: 1636047011:0;gdi
+: 1636047020:0;gws
+: 1636047036:0;rm reporting/reports.zip
+: 1636047089:0;gCl
+: 1636047099:0;which gCl
+: 1636047107:0;gia
+: 1636047122:0;git add reporting/report.js
+: 1636047138:0;alias | grep add
+: 1636047261:0;git commit --help
+: 1636047296:0;alias | grep commit
+: 1636047332:0;gcm 'fixed column widths and created persistant reports directory'
+: 1636048577:0;mkdir node_playground
+: 1636048618:0;node sample
+: 1636048644:0;./sample
+: 1636048656:0;chmod +x ./sample
+: 1636048658:0;chmod +x ./sample.js
+: 1636048825:0;npm run sample
+: 1636048835:0;npm run sample taco
+: 1636048947:0;npm i commander --save
+: 1636051335:0;npm install mongodb
+: 1636051344:0;npm install mongodb --save
+: 1636051740:0;npm remove --help
+: 1636051760:0;npm rm mongodb
+: 1636052049:0;npm install mongose 4.13.19
+: 1636052055:0;npm install mongoose 4.13.19
+: 1636052071:0;npm install mongoose@4.13.19
+: 1636124303:0;cd "/Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core"; clear
+: 1636166676:0;npm install eslint
+: 1636166719:0;npm install eslint -g
+: 1636166768:0;npm install -g prettier-eslint\
+
+: 1636167046:0;npm install -g prettier
+: 1636167136:0;npm install prettier prettier-eslint eslint
+: 1636167293:0;npm -S --help
+: 1636167303:0;npm --help
+: 1636167320:0;npm i -h
+: 1636167335:0;npm i -S -h
+: 1636181757:0;sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \\
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+: 1636181771:0;ls ~/.local/share
+: 1636181775:0;ls ~/.local/share/nvim
+: 1636181779:0;ls ~/.local/share/nvim/site
+: 1636181785:0;ls ~/.local/share/nvim/swap/
+: 1636181792:0;ls ~/.local/share/nvim/site/autoload/
+: 1636181841:0;ls ~/
+: 1636181844:0;la ~/
+: 1636182234:0;which vim
+: 1636182238:0;vim .config/nvim/init.vim
+: 1636188481:0;git checkout package.json
+: 1636188502:0;npm install --save commander
+: 1636189176:0;git commit -m 'refactored to support running as a standalone script'
+: 1636190533:0;node reporting/index.js
+: 1636190851:0;git commit -m 'adjustments to make eslint happy'
+: 1636190989:0;node reporting
+: 1636191103:0;git commit -m 'updated npm run reports command'
+: 1636191419:0;npm run reports --report-recipient-email="fart@poop.com"
+: 1636191465:0;npm run reports -r="fart@poop.com"
+: 1636191529:0;npm run reports -r "fart@poop.com"
+: 1636191729:0;npm run reports -- -r "fart@poop.com"
+: 1636191743:0;npm run reports --  --report-recipient-email="fart@poop.com"
+: 1636191834:0;git commit -m 'fixed user error with commander lib'
+: 1636191931:0;npm run reports --  -s '11/11/21'
+: 1636205202:0;d = new Date('11/11/21')
+: 1636209433:0;npm run reports --  -s '9/20/21'
+: 1636209538:0;git commit -m 'completed logic for handling specified date ranges'
+: 1636230634:0;la ~
+: 1636230650:0;ls ~/.config
+: 1636231729:0;sudo gem install json_pure
+: 1636231743:0;nvim
+: 1636234653:0;npm run reports 
+: 1636235398:0;git statu
+: 1636236665:0;git add -a
+: 1636236701:0;git commit -m 'added restaurant monthly fee to report and fixed spellings'
+: 1636389583:0;n install
+: 1636389587:0;n install lts
+: 1636389628:0;n install 17
+: 1636389646:0;npm 
+: 1636390399:0;vim sample.js
+: 1636390507:0;./sample.js
+: 1636390676:0;git commit -m 'crash on invalid dates'
+: 1636398639:0;git commit -m 'additional documentation and error catching
+: 1636398641:0;git commit -m 'additional documentation and error catching'
+: 1636398818:0;source ~/.zporfile
+: 1636398865:0;unalias gs
+: 1636398900:0;git commit -m 'removed unused config options'
+: 1636402978:0;grep /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js 'mailOptions.*'
+: 1636402993:0;grep 'mailOptions.*' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js
+: 1636403148:0;grep 'mailOptions.\w' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js
+: 1636403202:0;grep 'mailOptions.\w*' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js
+: 1636403212:0;grep 'mailOptions.\w*?' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js
+: 1636403248:0;grep 'mailOptions\.\w*' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js
+: 1636403264:0;grep 'mailOptions\.\w*' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js | cat
+: 1636403290:0;grep 'mailOptions\.\w*' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js -o
+: 1636403307:0;grep 'mailOptions\.\w*' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js -o | uniq
+: 1636403332:0;grep 'mailOptions\.\w*' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js -o | uniq -
+: 1636403341:0;grep 'mailOptions\.\w*' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js -o | uniq --help
+: 1636403346:0;grep 'mailOptions\.\w*' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js -o | uniq -h
+: 1636403359:0;man uniq
+: 1636403406:0;grep 'mailOptions\.\w*' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js -o | uniq -u
+: 1636403411:0;grep 'mailOptions\.\w*' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js -o | uniq - -u
+: 1636403472:0;grep 'mailOptions\.\w*' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js -o | sort -u
+: 1636407109:0;grep 'require(.*notification-service.js)' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/
+: 1636407116:0;grep 'require(.*notification-service.js)' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server
+: 1636407121:0;grep 'require(.*notification-service.js)' /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/*
+: 1636407165:0;$ brew install ripgrep\
+
+: 1636407186:0;cd server
+: 1636407212:0;rg 'require(.*?notification-service\
+'
+: 1636407219:0;rg 'require(.*?notification-service'\
+'
+: 1636407222:0;rg 'require(.*?notification-service'
+: 1636407228:0;rg 'require\(.*?notification-service'
+: 1636407241:0;rg 'notification-service'
+: 1636407248:0;rg require
+: 1636407262:0;rg notification-service
+: 1636407285:0;rg 'notification-service.js'
+: 1636407288:0;rg req
+: 1636407415:0;rg notification
+: 1636407632:0;rg notificationService
+: 1636407635:0;rg notificationS
+: 1636407649:0;rg email
+: 1636407699:0;vim  server/modules/restaurant/restaurant-controller.js
+: 1636407798:0;find notification
+: 1636407813:0;ls server
+: 1636407825:0;ls server/modules/notification/notification-service.js
+: 1636407828:0;vim server/modules/notification/notification-service.js
+: 1636407911:0;rg sendMail
+: 1636418224:0;rg mail
+: 1636418310:0;rg send
+: 1636418487:0;nvim /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/server/modules/notification/notification-service.js +
+: 1636418857:0;rg .register
+: 1636486624:0;npm install --save adm-zip
+: 1636496860:0;node reporting/reportDeliveryService.js
+: 1636497383:0;npm run reports
+: 1636497948:0;git commit -m 'working from data to emailed zip file` 
+: 1636497951:0;git commit -m 'working from data to emailed zip file'
+: 1636561007:0;npm run reports -- restaurant-bookings
+: 1636567511:0;node reporting restaurant-bookings
+: 1636568272:0;git add reporting/README.md
+: 1636568281:0;git --help
+: 1636568331:0;git commit -m 'refactored to feedback and documented work in reporting readme'
+: 1636570327:0;git commit -m 'ability to not send email as a flag'
+: 1636570443:0;node reporting restaurant-bookings --help
+: 1636571828:0;man look
+: 1636586809:0;brew install mysql
+: 1636587113:0;git clone git@github.com:caxy/deliverymenufirst-server.git
+: 1636587134:0;mkdir menu-data
+: 1636587207:0;cp /Volumes/GoogleDrive/Shared\ drives/Projects/Delivery\ First/Developer\ Resources\ -\ Delivery\ First/DF_myql_prod_2021-10-06.zip .
+: 1636587218:0;open DF_myql_prod_2021-10-06.zip
+: 1636587237:0;vim DF_myql_prod_2021-10-06.
+: 1636591498:0;mkdir personal
+: 1636591500:0;cd personal
+: 1636591502:0;git clone
+: 1636591505:0;git clone git@github.com:fathergoose/log-book.git
+: 1636591509:0;cd log-book
+: 1636591598:0;npm install -g npm@8.1.3
+: 1636591615:0;vim main.ts
+: 1636591656:0;/Applications/Visual\ Studio\ Code.app .
+: 1636591689:0;/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code .
+: 1636640833:0;cd Code/
+: 1636640840:0;cd menu-data
+: 1636641507:0;mysql -p -h
+: 1636641531:0;fzf
+: 1636641558:0;mysql -p --help | fzf
+: 1636641591:0;mysql -p --help | grep -p
+: 1636641597:0;mysql -p --help | grep '-p'
+: 1636641608:0;mysql -p --help | grep "-p"
+: 1636641610:0;mysql -p --help | grep 
+: 1636641613:0;mysql -p --help | grep p
+: 1636641621:0;mysql -p --help | grep \-p
+: 1636641704:0;mysql -p --help
+: 1636641802:0;cd Code/delivery_first/menu-data
+: 1636642034:0;mysql -uroot < DF_myql_prod_2021-10-06.sql
+: 1636642109:0;mysql -uroot deliverymenufirst < DF_myql_prod_2021-10-06.sql
+: 1636643115:0;sed -n '1,8370' < DF_myql_prod_2021-10-06.sql > deliveryfirstmenu.prod.sql
+: 1636643134:0;sed --help
+: 1636643210:0;brew install coreutils
+: 1636643304:0;gsed
+: 1636643451:0;sed -n 1,8370 < DF_myql_prod_2021-10-06.sql > deliveryfirstmenu.prod.sql
+: 1636643563:0;man sed
+: 1636643604:0;sed '' -n 1,8370 < DF_myql_prod_2021-10-06.sql > deliveryfirstmenu.prod.sql
+: 1636643626:0;sed '
+: 1636643663:0;sed '' DF_myql_prod_2021-10-06.sql  -n 1,8370 > d1menu.sql
+: 1636643685:0;brew install gnu-sed
+: 1636643709:0;rm deliveryfirstmenu.prod.sql
+: 1636643713:0;rm d1menu.sql
+: 1636643725:0;gsed -n 1,8370 < DF_myql_prod_2021-10-06.sql > deliveryfirstmenu.prod.sql
+: 1636643771:0;gsed '' -n 1,8370 < DF_myql_prod_2021-10-06.sql >! deliveryfirstmenu.prod.sql
+: 1636643782:0;gsed --help
+: 1636643837:0;gsed -e '' -n 1,8370  DF_myql_prod_2021-10-06.sql >! deliveryfirstmenu.prod.sql
+: 1636643884:0;gsed -e '' -n 1,8370p  DF_myql_prod_2021-10-06.sql >! deliveryfirstmenu.prod.sql
+: 1636643904:0;gsed -e ''  DF_myql_prod_2021-10-06.sql -n 1,8379p >! deliveryfirstmenu.prod.sql
+: 1636643938:0;gsed  -n 1,8370p  DF_myql_prod_2021-10-06.sql >! deliveryfirstmenu.prod.sql
+: 1636643942:0;cat deliveryfirstmenu.prod.sql
+: 1636643994:0;gsed  -n '8370,$p'  DF_myql_prod_2021-10-06.sql >! auth.prod.sql
+: 1636643996:0;cat auth
+: 1636644000:0;cat auth.prod.sql
+: 1636644007:0;count
+: 1636644010:0;wc
+: 1636644014:0;wc -h
+: 1636644060:0;wc -l auth.prod.sql
+: 1636644068:0;wc -l deliveryfirstmenu.prod.sql
+: 1636644200:0;mysql -uroot auth < auth.prod.sql
+: 1636666325:0;ls personal
+: 1636666334:0;mv personal oss
+: 1636666337:0;ls oss
+: 1636666343:0;git@github.com:suolapeikko/FinderUtilities.git
+: 1636666353:0;git clone git@github.com:suolapeikko/FinderUtilities.git
+: 1636666378:0;cd FinderUtilities
+: 1636668694:0;git checkout -b DFA-37
+: 1636668712:0;git checkout -b DFA-39
+: 1636668961:0;cd ../menu-data
+: 1636669013:0;npm i
+: 1636671029:0;msql
+: 1636671039:0;mysql -uroot
+: 1636680284:0;cd ../delivery-first-backend-core/reporting
+: 1636680318:0;npm install mysql --save
+: 1636692538:0;pip install jmespath-terminal\
+
+: 1636692546:0;python
+: 1636692798:0;/Applications/Python\ 3.9/Install\ Certificates.command ; exit;
+: 1636692840:0;/Applications/Python\ 3.9/Update\ Shell\ Profile.command ; exit;
+: 1636692877:0;ls `which python`
+: 1636692882:0;la `which python`
+: 1636692954:0;cd /Library/Frameworks/Python.framework/Versions/3.9/bin
+: 1636692991:0;pip3 install jmespath-terminal
+: 1636694765:0;curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py\
+
+: 1636694775:0;python3 get-pip.py
+: 1636694784:0;pip
+: 1636694795:0;pip install jmespath-terminal
+: 1636694930:0;pip install urwid==1.2.2
+: 1636696549:0;cd Code/delivery_first/delivery-first-backend-core/reporting/archives
+: 1636696565:0;cat western-ave-bookings.json| jp []
+: 1636696573:0;cat western-ave-bookings.json| jp '[]'
+: 1636696633:0;cd archives
+: 1636696651:0;cat western-ave-bookings.json|jp filter.jp
+: 1636696746:0;jp -h
+: 1636696772:0;jp -e filter.jp -f western-ave-bookings.json
+: 1636697227:0;brew install jq
+: 1636698441:0;jq -f western-ave-bookings.json -e filter.jq
+: 1636698767:0;jq --help
+: 1636720581:0;man jq
+: 1636720585:0;jq -f filter.jq  western-ave-bookings.json
+: 1636723853:0;ls -a
+: 1636723868:0;ls .local
+: 1636723871:0;ls .local/share
+: 1636723874:0;ls .local/share/nvim
+: 1636723879:0;ls .local/share/nvim/site
+: 1636723881:0;ls .local/share/nvim/site/autoload
+: 1636723908:0;mkdir .local/bin
+: 1636723943:0;mv Downloads/jiq_darwin_amd64 .local/bin/
+: 1636723958:0;chmod +x .local/bin/jiq_darwin_amd64
+: 1636723977:0;mv .local/bin/jiq_darwin_amd64 .local/bin/jiq
+: 1636724092:0;jiq
+: 1636724099:0;jiq --help
+: 1636724121:0;man jiq
+: 1636724319:0;cd DeliveryFirst
+: 1636724327:0;cat AllFieldsRestZoneBookRpt.json| jiq
+: 1636734136:0;mv newfile.txt .obsidian.vimrc
+: 1636734364:0;vim .zprofile
+: 1636734423:0;source .zprofile
+: 1636734431:0;cd icloud
+: 1636734435:0;icloud
+: 1636734444:0;cd Mobile\ Documents/
+: 1636734484:0;cd /Users/alexanderilseman/Library/Mobile Documents/iCloud~md~obsidian/Documents/Caxy\
+
+: 1636734494:0;cd '/Users/alexanderilseman/Library/Mobile Documents/iCloud~md~obsidian/Documents/Caxy'\
+
+: 1636734498:0;vim .obsidian.vimrc
+: 1636788384:0;cd Code/oss
+: 1636788396:0;mkdir my-electron-app
+: 1636788399:0;cd my-electron-app
+: 1636788402:0;npm init -y
+: 1636788411:0;$ npm install --save-dev electron\
+
+: 1636788414:0;npm install --save-dev electron\
+
+: 1636804866:0;node /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/reporting/restaurantBookingZoneReports/mySqlRepository.js
+: 1636810824:0;ls ~/.js-repl
+: 1636810827:0;ls ~/.js-repl/logs
+: 1636810834:0;ls -la ~/.js-repl/logs
+: 1636841547:0;npm install -f janeway
+: 1636841563:0;node - v
+: 1636841583:0;npm install -g janeway
+: 1636842117:0;cd ../../delivery_first/delivery-first-backend-core
+: 1636869876:0;brew install tree
+: 1636869938:0;tree -i
+: 1636869952:0;tree -A
+: 1636869955:0;tree -S
+: 1636869957:0;tree 
+: 1636869972:0;tree --help | fzf
+: 1636870013:0;man tree
+: 1636882816:0;cd Code/delivery_first/delivery-first-backend-core/reporting
+: 1636882829:0;tree -h
+: 1636882837:0;tree --help | exclude
+: 1636882843:0;tree --help | fzf 
+: 1636882979:0;tree -I reports -I archives
+: 1636990700:0;janeway configuration.js
+: 1636990901:0;janeway --help
+: 1636990909:0;man janeway
+: 1636997884:0;rm -rf reports/*
+: 1636997892:0;ls archives
+: 1636997913:0;rm -rf archives/reports.zip
+: 1636997945:0;vim ../package.json
+: 1636997962:0;node ./reporting -- restaurant-booking
+: 1636998010:0;janeway . restaurant-bookings
+: 1636998028:0;node . restaurant-bookings
+: 1636998664:0;echo 'node . restaurant-bookings' | pbcopy
+: 1636998678:0;node . restaurant-bookings\
+
+: 1636999569:0;node reporting restaurant-bookings --no-email\
+
+: 1637004108:0;git commit -m 'refactored to accomidate offline reports'
+: 1637004171:0;man mongorestore
+: 1637004177:0;mongorestore --help
+: 1637004255:0;cd ~/Code/
+: 1637004274:0;cd mongo_dump_11_15_21
+: 1637004282:0;ls deliveryfirst-live
+: 1637004559:0;node reporting restaurant-bookings \
+
+: 1637006036:0;node reporting restaurant-bookings -s '2021-11-08' -e '2021-11-14'\
+
+: 1637012804:0;node reporting restaurant-bookings -s '2021/11/08' -e '2021/11/14'\
+
+: 1637014388:0;node reporting online-orders -s '2021/11/08' -e '2021/11/14'\
+
+: 1637016995:0;ls --help
+: 1637017000:0;man ls
+: 1637017035:0;finder .
+: 1637030428:0;npm install -g eslint
+: 1637030879:0;cd reporting/
+: 1637049685:0;cd ~/Code/delivery_first/delivery-first-backend-core/
+: 1637049692:0;node reporting 
+: 1637049721:0;ls reports/reporting
+: 1637049730:0;ls reporting/reports/
+: 1637049930:0;open reporting/reports
+: 1637054092:0;git commit -m 'mostly functional online order reports'
+: 1637066590:0;janeway reporting online-orders
+: 1637067143:0;npm update -h
+: 1637067153:0;npm update -g janeway
+: 1637079734:0;brew install macvim
+: 1637079937:0;macvim
+: 1637079942:0;mvim
+: 1637080116:0;brew --help
+: 1637080128:0;brew confi
+: 1637080130:0;brew config
+: 1637080166:0;ls /opt/homebrew/bin/mvimex
+: 1637080168:0;/opt/homebrew/bin/mvimex
+: 1637080487:0;/opt/homebrew/bin/mvim
+: 1637106526:0;git add .
+: 1637106558:0;git commit -m 'online restaurant summary reports generating in full, no email yet'
+: 1637150991:0;mkdir  reporting/reports/weeklyRestaurantSummaries
+: 1637151041:0;mv reporting/reports/.gitignore reporting/reports/weeklyOnlineOrderSummaries
+: 1637151059:0;cp reporting/reports/weeklyOnlineOrderSummaries/.gitignore reporting/reports/weeklyRestaurantSummaries
+: 1637153177:0;gcmsg 'online reports are now able to be emailed'
+: 1637153185:0;git commit -m 'online reports are now able to be emailed'
+: 1637166700:1;node reporting online-orders --help
+: 1637166763:0;node reporting online-orders -s 10/25/2021 -e 10/30/2021 -r brayden@caxy.com
+: 1637168983:0;git add reporting/baseRestaurantReport.js
+: 1637169521:0;node reporting online-orders 
+: 1637170253:0;grep 'DATABASE' <  DF_mysql_prod_11_17_21.sql 
+: 1637170284:0;fzf -h
+: 1637170353:0;cat   DF_mysql_prod_11_17_21.sql | fzf
+: 1637170510:0;mysql -uroot deliverymenufirst_live < DF_mysql_prod_11_17_21.sql\
+
+: 1637170517:0;mysql -ui root deliverymenufirst_live < DF_mysql_prod_11_17_21.sql\
+
+: 1637170524:0;mysql -u -i root deliverymenufirst_live < DF_mysql_prod_11_17_21.sql\
+
+: 1637170559:0;mysql -uroot -pQu7eFres1  deliverymenufirst_live < DF_mysql_prod_11_17_21.sql\
+
+: 1637170580:0;mysql -uroot -pQu7eFres1  deliverymenufirst < DF_mysql_prod_11_17_21.sql\
+
+: 1637170816:0;mysql -uroot -pQu7eFres1  deliverymenufirst_live < DF_mysql_prod_11_17_21.sql
+: 1637170998:0;cat DF_mysql_prod_11_17_21.sql | grep 'database'
+: 1637171004:0;cat DF_mysql_prod_11_17_21.sql | grep Database
+: 1637171009:0;grep -h
+: 1637171014:0;grep --help
+: 1637171032:0;mysql -p --help | grep -l
+: 1637171037:0;cat DF_mysql_prod_11_17_21.sql | grep Database -l
+: 1637171041:0;man grep
+: 1637171087:0;cat DF_mysql_prod_11_17_21.sql | grep Database -n
+: 1637171107:0;cat DF_mysql_prod_11_17_21.sql | grep DATABASE -n
+: 1637171274:0;cat /Users/alexanderilseman/Data/DF_myql_prod_2021-10-06.sql | grep DATABASE -n
+: 1637171282:0;cat /Users/alexanderilseman/Data/DF_myql_prod_2021-10-06.sql | grep Database -n
+: 1637172116:0;mysql -uroot -pQu7eFres1  deliverymenufirst < /Users/alexanderilseman/Data/deliverymenufirst_prod_11_17_21.sql
+: 1637172199:0;node reporting online-orders -s 10/25/2021 -e 10/30/2021 
+: 1637173839:0;node reporting online-orders -s 10/25/2021 -e 10/30/2021 --no-email
+: 1637175463:0;node reporting online-orders -s 9/27/2021 -e 10/03/2021 --no-email
+: 1637176325:0;history -E
+: 1637176336:0;history --help
+: 1637176339:0;man history
+: 1637176419:0;fc
+: 1637176422:0;run-help history
+: 1637176487:0;fc -l -m 'mongorestore' -i
+: 1637176494:0;fc -l -i -m 'mongorestore'
+: 1637176506:0;history
+: 1637176601:0;fc -lim "*mongo*" 
+: 1637176652:0;fc -lim "*mongo*" 1
+: 1637177350:0;cd Code/delivery_first/delivery-first-backend-core
+: 1637177430:0;git add reporting/onlineBookingReports/online*
+: 1637177478:0;git commit 'fixed issues with cell alignment and number formatting or online order reports'
+: 1637177483:0;git commit -m 'fixed issues with cell alignment and number formatting or online order reports'
+: 1637178121:0;gcmsg
+: 1637179463:0;node reporting online-orders
+: 1637185514:0;gcmsg 'fixed issue with delivery charge sum'
+: 1637185912:0;node reporting restaurant-summaries -s '2021/9/27' -e '2021/10/03'
+: 1637185919:0;node reporting --help
+: 1637186093:0;cd Downloads
+: 1637186106:0;mkdir reports-for-qa
+: 1637186118:0;mv restaurant_summaries_20210927-20211003 reports-for-qa
+: 1637186131:0;mv online_reports_20210927-20211003 reports-for-qa
+: 1637186158:0;vim reports-for-qa/readme.md
+: 1637186747:0;node reporting restaurant-summaries -s '2021/11/08' -e '2021/11/14'
+: 1637188336:0;gcmsg 'corrected issue with bad sum for online-orders'
+: 1637190091:0;node reporting online-orders -s '2021/11/08' -e '2021/11/14'
+: 1637190100:0;node reporting restaurant-bookings -s '2021/11/08' -e '2021/11/14'
+: 1637190158:0;gcmsg 'more descriptive report attachemnt names'
+: 1637190787:0;node reporting restaurant-reports -s '2021/9/27' -e '2021/10/03'
+: 1637191949:0;echo 'he@'
+: 1637191957:0;echo "he@"
+: 1637191971:0;node reporting restaurant-bookings -s '2021/11/08' -e '2021/11/14' -r 'megan@caxy.com'
+: 1637265971:0;A
+: 1637267477:0;node reporting restaurant-bookings -s '2021/9/27' -e '2021/10/03'
+: 1637267534:0;gcmsg 'output directories cleaned before new reports generated'
+: 1637268804:0;node reporting restaurant-bookings -s '2021/9/27' -e '2021/10/03' -d alexander@caxy.com
+: 1637270030:0;node reporting online-orders -s '2021/9/27' -e '2021/10/03' -r alexander@caxy.com
+: 1637270842:0;gcmsg 'removed config variables in favor of .env file'
+: 1637271620:0;gcmsg 'removed unnecessary comments'
+: 1637272169:0;git checkout -b online-orders
+: 1637272180:0;git branch -h
+: 1637272194:0;git branch -D DFA-39
+: 1637272217:0;git checkout -b DFA-39/online-order-reports
+: 1637345229:0;gcmsg 'added totals page for online reports'
+: 1637346459:0;node reporting restaurant-bookings -s '2021/9/27' -e '2021/10/03' -r alexander@caxy.com
+: 1637347502:0;node reporting online-orders -s '2021/9/27' -e '2021/10/03'
+: 1637347587:0;gaa && gcmsg 'cleaned up restaurant report classes'
+: 1637347740:0;git checkout -b DFA-44/online-order-totals
+: 1637347987:0;node reporting online-orders -s '2021/11/08' -e '2021/11/14' -r 'megan@caxy.com'
+: 1637353335:0;which python3
+: 1637353345:0;harfbuzz
+: 1637353521:0;cp .env.example .env
+: 1637353627:0;sudo xcodebuild -liscense -y
+: 1637353629:0;sudo xcodebuild -liscense 
+: 1637353643:0;curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin\
+
+: 1637353710:0;cat reporting_sql.js
+: 1637353716:0;rm -rf reporting_sql.js
+: 1637353734:0;npm  -v
+: 1637353846:0;ls logging
+: 1637353875:0;nvim /Users/alexanderilseman/.npm/_logs/2021-11-19T20_30_12_515Z-debug.log +
+: 1637353990:0;mkdir ../logs
+: 1637354556:0;rg STARTING MONGO CONNECTION
+: 1637354560:0;rg 'STARTING MONGO CONNECTION'
+: 1637354564:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-server/database/mongoLib.js +
+: 1637354578:0;ls database
+: 1637354584:0;ls database/mysqlLib.js
+: 1637354587:0;vim database/mysqlLib.js
+: 1637355112:0;brew services restart redis
+: 1637356796:0;cd Code/delivery_first/
+: 1637357684:0;cd delivery_first
+: 1637357700:0;mkdir ios-moved
+: 1637357757:0;mv Podfile Podfile.lock ../ios-moved
+: 1637357779:0;cat CLApp\ copy-Info.plist
+: 1637357852:0;mv CLApp.xcworkspace ../ios-moved
+: 1637361194:0;cd l.,
+: 1637361208:0;rm -rf delivery-first-ios-restaurant
+: 1637361212:0;git clone git@github.com:caxy/delivery-first-ios-restaurant.git
+: 1637361369:0;pod
+: 1637361395:0;brew install cocoapods
+: 1637361847:0;vim Podfile.lock
+: 1637361937:0;ls Pods
+: 1637361941:0;ls Pods/Kingfisher
+: 1637363125:0;open Pods/Pods.xcodeproj
+: 1637363165:0;open CLApp.xcworkspace
+: 1637364313:0;pod clean
+: 1637364331:0;pod cache
+: 1637364336:0;pod cache clean
+: 1637364343:0;pod cache clean --all
+: 1637364348:0;pod install
+: 1637367217:0;brew install harfbuzz
+: 1637367517:0;brew zlib
+: 1637367523:0;brew install zlib
+: 1637367545:0;brew install libpng
+: 1637367556:0;brew install liblcms2
+: 1637367928:0;curl -L https://nixos.org/nix/install | sh\
+
+: 1637368046:0;cd oss
+: 1637368048:0;git clone https://github.com/kovidgoyal/kitty && cd kitty\
+
+: 1637368094:0;cd Code/oss/kitty
+: 1637368097:0;nix-shell
+: 1637368200:0;nix-shell --pure
+: 1637600411:0;cd 11_22_21
+: 1637600492:0;mysql -uroot deliverymenufirst < deliveryfirstmenu.prod.sql
+: 1637600516:0;mysql -uroot deliverymenufirst < deliverymenufirst_prod_11_22_21.sql
+: 1637600528:0;mysql -uroot -pQu7eFres1 deliverymenufirst < deliverymenufirst_prod_11_22_21.sql
+: 1637600551:0;cd mongo_dump_11_22_21
+: 1637600825:0;unzip mongo_dump_11_22_21.zip mmongo_dump_folder
+: 1637600828:0;unzip mongo_dump_11_22_21.zip 
+: 1637601040:0;rg console.log 
+: 1637601068:0;nvim /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/reporting/offlineBookingReports/offlineBookingReportsController.js +
+: 1637601193:0;node reporting online -s '2021/11/15' -e '2021/11/21' -r alexander@caxy.com
+: 1637601319:0;node reporting online-orders -s '2021/11/15' -e '2021/11/21' -r megan@caxy.com
+: 1637601344:0;node reporting restaurant-bookings -s '2021/11/15' -e '2021/11/21' -r megan@caxy.com
+: 1637608751:0;node reporting restaurant-bookings -s '2021/11/15' -e '2021/11/21' -r alexander@caxy.com
+: 1637608898:0;node reporting online-orders -s '2021/11/15' -e '2021/11/21' -r alexander@caxy.com
+: 1637609001:0;gcmsg 'only connect and disconnect to mongodb once'
+: 1637611657:0;node reporting restaurant-bookings -s '2021/11/1' -e '2021/11/7' -r megan@caxy.com
+: 1637611722:0;node reporting online-orders -s '2021/11/1' -e '2021/11/7' -r megan@caxy.com
+: 1637611734:0;node reporting online-orders -s '2021/11/7' -e '2021/11/14' -r megan@caxy.com
+: 1637612340:0;janeway
+: 1637612725:0;node test.js 
+: 1637612788:0;node test.js -s '1988/04/26'
+: 1637613233:0;git stash
+: 1637613261:0;node reporting online-orders -s '2021/11/8' -e '2021/11/14' -r megan@caxy.com
+: 1637613339:0;node reporting restaurant-bookings -s '2021/11/8' -e '2021/11/14' -r megan@caxy.com
+: 1637614865:0;node reporting restaurant-bookings -s '2021/11/8' -e '2021/11/14' --no-email
+: 1637615023:0;git checkout -b DFA-45/report-automation
+: 1637615092:0;git commit -m 'automaticaly set the date range to preceding mon-sun if not supplied'
+: 1637615446:0;if res=`git push); then; echo "success"; else echo "failure";fi
+: 1637615450:0;if res=`git push`; then; echo "success"; else echo "failure";fi
+: 1637615462:0;$res
+: 1637615475:0;if res=`git push`; then; echo "success"; else echo $res;fi
+: 1637615501:0;res=`git push`
+: 1637615504:0;echo res
+: 1637615531:0;res=$(git push)
+: 1637615541:0;export res=$(git push)
+: 1637615544:0;echo $res
+: 1637615658:0;if git push; then; ; else git push | sed /set-upstream/p ;fi
+: 1637615793:0;if git push; then; ; else git push 2>&1 >&- > /dev/null | sed /set-upstream/p ;fi
+: 1637615863:0;if git push; then; ; else git push 2>&1 >&- > /dev/null | sed /set-upstream/p | exec ;fi
+: 1637615953:0;if git push; then; ; else git push 2>&1 >&- > /dev/null | sed /set-upstream/p | eval ;fi
+: 1637615995:0;if git push; then; ;eval "$(else git push 2>&1 >&- > /dev/null | sed /set-upstream/p )" ;fi
+: 1637616337:0;vim run_reports.sh
+: 1637616358:0;mv run_reports.sh run_reports.bash
+: 1637616371:0;ls /bin
+: 1637616386:0;vim run_reports.bash
+: 1637616434:0;if git push; then; ;else eval "$( git push 2>&1 >&- > /dev/null | sed /set-upstream/p )" ;fi
+: 1637616666:0;git add run_reports.bash
+: 1637616690:0;chmod +x run_reports.bash
+: 1637616699:0;mv run_reports.bash run_reports
+: 1637616702:0;vim run_reports
+: 1637616839:0;git commit -m 'added script to call from crontab'
+: 1637617347:0;cat run_reports
+: 1637617451:0;mkdir scripts
+: 1637617459:0;mv run_reports scripts
+: 1637617482:0;git commit -m 'moved run_reports into scripts/ dir'
+: 1637619231:0;rg console.log
+: 1637619238:0;nvim /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/reporting/configuration.js +
+: 1637619250:0;nvim /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/reporting/onlineBookingReports/onlineBookingReportsController.js +
+: 1637619278:0;git commit -m 'removed unnecessary console.log;
+: 1637619280:0;git commit -m 'removed unnecessary console.log'
+: 1637619360:0;gcmsg 'removed dead comment code'
+: 1637619397:0;vim index.js
+: 1637619402:0;vim reporting/index.js
+: 1637619461:0;vim reporting/services/bookingService.js 
+: 1637620303:0;vim reporting/services/bookingService.js
+: 1637620335:0;git commit -m 'improved documentation, removed unnecessary comments, improved good comments'
+: 1637620588:0;vim test
+: 1637620593:0;vim test.js
+: 1637620838:0;rm test.js
+: 1637620863:0;vim ~/.ssh/id_rsa
+: 1637620875:0;vim ~/.ssh/id_ed25519
+: 1637620897:0;rm ~/.ssh/id_rsa*
+: 1637620929:0;git pull origin DFA-39:DFA-/online-order-reports
+: 1637620958:0;git pull origin DFA-39:DFA-/online-order-reports --no-rebase
+: 1637621002:0;git remote prune origin
+: 1637621023:0;git branch --unset-upstream
+: 1637621067:0;git pull origin DFA-39
+: 1637621079:0;git pull origin DFA-39 --no-rebase
+: 1637621102:0;git pull origin DFA-39/online-order-reports --no-rebase
+: 1637621202:0;vim .env.example
+: 1637621262:0;git checkout DFA-39
+: 1637621266:0;git checkout DFA-39/online-order-reports
+: 1637621288:0;git commit -m 'added example fields to example env'
+: 1637621321:0;git push --set-upstream origin DFA-39/online-order-reports
+: 1637621403:0;vim reporting/onlineBookingReports/onlineRestaurantReport.js
+: 1637621641:0;git commit -m 'added "public method" comments to report classes'
+: 1637621679:0;vim reporting/onlineBookingReports/onlineBookingReportsController.js
+: 1637621760:0;rg \itodo
+: 1637621768:0;rg --help
+: 1637621773:0;man rg
+: 1637621800:0;rg -i todo
+: 1637621815:0;rg -h
+: 1637621857:0;rg -i todo ./reporting
+: 1637621861:0;rg -i todo ./
+: 1637621896:0;git commit -m 'updated controller docs for online booking reports'
+: 1637622625:0;cd ios-moved
+: 1637625622:0;npm run
+: 1637625648:0;rg -i port
+: 1637625820:0;ls services
+: 1637625824:0;vim services/httpService.js
+: 1637625868:0;vim startup/index.js
+: 1637686298:0;git checkout test
+: 1637686315:0;git checkout DFA-45/report-automation
+: 1637686327:0;git rebase --help
+: 1637686347:0;git rebase test
+: 1637689955:0;git clone git@github.com:caxy/deliverymenufirst-auth.git
+: 1637690255:0;cd deliverymenufirst-auth
+: 1637690274:0;n -v
+: 1637694030:0;codesign --remove-signature /Applications/GitKraken.app/Contents/Frameworks/GitKraken\ Helper\ \(Renderer\).app
+: 1637695632:0;git commit -m 'DFA-47: Add cash collected by FCD column to online order report summary'
+: 1637695694:0;nvim /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/reporting/app.js +64
+: 1637696151:0;git rm --help
+: 1637697899:0;node app.js
+: 1637697921:0;ls config/dev.json
+: 1637698042:0;rg found
+: 1637698074:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-auth/node_modules/config/lib/config.js +203
+: 1637698147:0;ls ../logs
+: 1637698189:0;cat app.js
+: 1637698406:0;vim app.js
+: 1637698424:0;node app.js NODE_APP_INSTANCE=dev
+: 1637698459:0;ls libs
+: 1637698489:0;cd services
+: 1637698536:0;ls module
+: 1637698545:0;ls modules/index.js
+: 1637698547:0;vim modules/index.js
+: 1637698558:0;vim startupService.js
+: 1637698565:0;vim services/startupService.js
+: 1637698817:0;vim package.js
+: 1637702070:0;vim reporting/onlineBookingReports/onlineZoneReport.js
+: 1637702507:0;nvim /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/reporting/onlineBookingReports/onlineRestaurantReport.js +
+: 1637702759:0;git commit -m "DFA-47: Add total charged owed column to online order report summary page"
+: 1637705874:0;node reporting online-orders -s '2021/11/8' -e '2021/11/14' --no-email
+: 1637706345:0;git add reporting/*
+: 1637706392:0;git commit -m 'DFA-47: Added FDC fee, stripe fee, and total owed to restaurant to online reports'
+: 1637707864:0;cd ../deliverymenufirst-auth
+: 1637708394:0;ls config
+: 1637768673:0;NODE_ENV=dev node app.js
+: 1637772215:0;git add reporting/onlineBookingReports/onlineRestaurantReport.js
+: 1637772234:0;git commit -m 'DFA-47: removed unused code'
+: 1637782863:0;rm -rf ios-moved
+: 1637782872:0;cd delivery-first-ios-restaurant
+: 1637783409:0;git clone git@github.com:caxy/deliverymenufirst-android.git
+: 1637784601:0;cd app
+: 1637793793:0;ping localhost:3001
+: 1637793807:0;ping 127.0.0.1:3001
+: 1637793816:0;ping http://127.0.0.1:3001
+: 1637793860:0;sudo lsof -i -P | grep LISTEN\
+
+: 1637793962:0;ping localhost
+: 1637794015:0;nmap
+: 1637794020:0;brew install nmap
+: 1637794053:0;nmap -p 3001 localhost
+: 1637794149:0;curl http://127.0.0.1:3001/marketplace_fetch_app_configuration
+: 1637794160:0;curl POST http://127.0.0.1:3001/marketplace_fetch_app_configuration
+: 1637794170:0;curl -x POST http://127.0.0.1:3001/marketplace_fetch_app_configuration
+: 1637794174:0;curl -X POST http://127.0.0.1:3001/marketplace_fetch_app_configuration
+: 1637794199:0;curl --help all
+: 1637794223:0;curl --help
+: 1638205453:0;brew install ngrok/ngrok/ngrok
+: 1638206098:0;ngrok authtoken 21bNxrNtHnHeGclPpvvkAbtb4jq_3kBrTxHx9YTqMkqmsooNr
+: 1638206184:0;ksj
+: 1638206192:0;ngrok help
+: 1638206328:0;ngrok http 80
+: 1638207864:0;cd Code/delivery_first
+: 1638210259:0;curl https://sh.rustup.rs -sSf | sh\
+
+: 1638210307:0;source .cargo/env
+: 1638210314:0;bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)\
+
+: 1638210409:0;lunarvim
+: 1638210438:0;lvim
+: 1638210472:0;lvim 
+: 1638210491:0;it diff
+: 1638210513:0;lvim config/dev.json
+: 1638211097:0;vim config/dev.json
+: 1638211105:0;code config/dev.json
+: 1638212262:0;mysql -u -i root deliverymenufirst_live < deliverymenufirst_prod_11_29_21.sql
+: 1638212296:0;mysql -uroot -pQu7eFres1 deliverymenufirst_live < deliverymenufirst_prod_11_29_21.sql
+: 1638212324:0;cd mongo_dump_11_29_21
+: 1638212748:0;cd "/Users/alexanderilseman/Data/11-29-21"
+: 1638212748:0;~
+: 1638212759:0;/code/delivery_first
+: 1638212763:0;/code
+: 1638212869:0;node reporting online-orders -d megan@caxy.com
+: 1638212906:0;node reporting restaurant-bookings -r megan@caxy.com
+: 1638216265:0;cd ~/Data
+: 1638216783:0;cd 11-29-21
+: 1638216791:0;vim sql
+: 1638217517:0;mysql -uroot -pQu7eFres1 deliverymenufirst
+: 1638217579:0;mysql -uroot -pQu7eFres1 deliverymenufirst < deliverymenufirst_prod_11_29_21.sql
+: 1638217879:0;mysql -uroot -pQu7eFres1 auth < df_auth_11_29_21.sql
+: 1638218875:0;vim deliverymenufirst_prod_11_29_21.sql
+: 1638219022:0;brew searh mysql
+: 1638219029:0;brew search mysql
+: 1638219065:0;brew install mysql@5.7
+: 1638219125:0;mysql@5.7
+: 1638219160:0;/opt/homebrew/opt/mysql@5.7/bin/mysql 
+: 1638219620:0;brew services stop mysql
+: 1638219648:0;brew services start  /opt/homebrew/opt/mysql@5.7/bin/mysql
+: 1638219666:0;brew services start  mysql@5.7
+: 1638219682:0;brew services restart  mysql@5.7
+: 1638219760:0;brew doctor
+: 1638219867:0;which rm
+: 1638219928:0;ps -feax | grep mysqld \
+
+: 1638219969:0;mysql -u root -p -h127.0.0.1\
+
+: 1638219976:0;mysql -u root  -h127.0.0.1\
+
+: 1638219987:0;mysql -u root -h127.0.0.1 --protocol=tcp\
+
+: 1638220053:0;/opt/homebrew/opt/mysql@5.7/bin/mysqld stop
+: 1638220093:0;/opt/homebrew/opt/mysql@5.7/bin/mysql.server start
+: 1638220669:0;/opt/homebrew/opt/mysql@5.7/bin/mysql -uroot
+: 1638285483:0;rg
+: 1638285487:0;git -v
+: 1638285491:0;git --version
+: 1638288489:0;brew services start mysql
+: 1638288505:0;cd ../code/delivery_first
+: 1638291502:0;brew services restartstart mysql
+: 1638292358:0;mysql
+: 1638292371:0;mysql -uroot -pQu7eFres1
+: 1638295044:0;cd ~/data
+: 1638295049:0;ls -lah
+: 1638298632:0;mysql -uroot -pQu7eFres1 deliverymenufirst < df_deliverymenufirst_11_29_21.sql
+: 1638298772:0;cd ~/Code/delivery_first/ls
+: 1638299404:0;cd df_mysql_11_29_21
+: 1638299413:0;vim df_deliverymenufirst_11_29_21.sql
+: 1638300841:0;cd Oldest
+: 1638300845:0;vim DF_myql_prod_2021-10-06.sql
+: 1638302720:0;cd ../../code/delivery_first
+: 1638302872:0;cd deliverymenufirst-server
+: 1638306154:0;brew install pandoc
+: 1638306237:0;pandoc
+: 1638306247:0;pandoc --help
+: 1638306251:0;which pandoc
+: 1638307959:0;brew install libgccjit
+: 1638307988:0;cd ~/Code/oss
+: 1638307990:0;git clone git://git.savannah.gnu.org/emacs.git
+: 1638308428:0;cd emacs
+: 1638308463:0;brew install autoconf
+: 1638308472:0;./autogen.sh
+: 1638308482:0;./configure
+: 1638308515:0;brew install makeinfo
+: 1638308544:0;brew install texinfo
+: 1638308604:0;cd Code/oss/emacs
+: 1638308606:0;export PATH="/usr/local/opt/texinfo/bin:$PATH"
+: 1638308608:0;./configure --with-native-compilation
+: 1638308647:0;vim config.log
+: 1638308810:0;make --version
+: 1638308814:0;gcc --version
+: 1638309433:0;brew tap d12frosted/emacs-plus
+: 1638309563:0;brew install emacs-plus --with-modern-doom3-icon
+: 1638309606:0;brew install emacs-plus@28 --with-modern-doom3-icon --with-native-comp
+: 1638311761:0;rm /Applications/Emacs.app
+: 1638311990:0;gfind
+: 1638311993:0;gnu-find
+: 1638312021:0;brew install findutils
+: 1638312111:0;rm -rf ~/.emacs.d
+: 1638312114:0;git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d\
+~/.emacs.d/bin/doom install
+: 1638312148:0;open /opt/homebrew/opt/emacs-plus@28
+: 1638312222:0;emacs
+: 1638312316:0;vim .zpro
+: 1638312377:0;doom sync
+: 1638312399:0;~/.emacs.d/bin/doom sync
+: 1638312502:0;vim
+: 1638312992:0;cd ../../delivery_first
+: 1638312997:0;git clone git@github.com:caxy/delivery-first-android-driver.git
+: 1638314005:0;git clone git@github.com:caxy/deliverymenufirst-ios.git
+: 1638314135:0;cd ios
+: 1638314138:0;cd deliverymenufirst-ios
+: 1638314143:0;cd TookanVendor
+: 1638314161:0;open TookanVendor.xcworkspace
+: 1638387817:0;cd Data/12-01-21
+: 1638387837:0;mysql -uroot -pQu7eFres1 deliverymenufirst < prod_deliverymenufirst_12_01_21.sql
+: 1638389015:0;clear
+: 1638389033:0;ngrok http 3001
+: 1638389813:0;vim prod_deliverymenufirst_12_01_21.sql
+: 1638390376:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-server/node_modules/mysql/lib/protocol/sequences/Sequence.js +48
+: 1638390394:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-server/node_modules/mysql/lib/protocol/sequences/Query.js +82
+: 1638390467:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-server/database/mysqlLib.js +74
+: 1638390491:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-server/modules/servingRestrictions/services/geofenceService.js +182
+: 1638390521:0;rg 'GeomFromText()'
+: 1638390532:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-server/modules/servingRestrictions/services/geofenceService.js +
+: 1638391333:0;cd ../deliverymenufirst-server
+: 1638391335:0;rg fetchProductsForCategoryForWebapp
+: 1638394123:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-server/routes/v2/customer_open_apis.js +
+: 1638396340:0;rg '\wdb\w'
+: 1638396348:0;rg '\db\s'
+: 1638396350:0;rg '\sdb\s'
+: 1638399506:0;cd 12-01-21
+: 1638399509:0;cd df_ordering_prod
+: 1638399512:0;cd deliverymenufirst-dev
+: 1638399535:0;mongorestore --db=deliverymenufirst . --drop
+: 1638400911:0;cat ../menu-data/scratch.json | jq '.length'
+: 1638400951:0;cat ../menu-data/scratch.json | jq '. | length'
+: 1638400993:0;cat ../menu-data/scratch.json | jq '.[].name_json.en'
+: 1638401007:0;cat ../menu-data/scratch.json | jq '.[].name_json.[].en'
+: 1638401010:0;cat ../menu-data/scratch.json | jq '.[].name_json[].en'
+: 1638401019:0;cat ../menu-data/scratch.json | jq '.[].[name_json].en'
+: 1638401024:0;cat ../menu-data/scratch.json | jq '.[[].name_json].en'
+: 1638401045:0;cat ../menu-data/scratch.json | jq '.[].name_json[]'
+: 1638401051:0;cat ../menu-data/scratch.json | jq '[.[].name_json]'
+: 1638401065:0;cat ../menu-data/scratch.json | jq '[.[].name_json].[].en'
+: 1638401073:0;cat ../menu-data/scratch.json | jq '[.[].name_json].en'
+: 1638401093:0;cat ../menu-data/scratch.json | jq '.[].name_json'
+: 1638401100:0;cat ../menu-data/scratch.json | jq '.[].name_json | .en'
+: 1638401106:0;cat ../menu-data/scratch.json | jq '.[].name_json | .[].en'
+: 1638401114:0;cat ../menu-data/scratch.json | jq '[.[].name_json] | .[].en'
+: 1638401124:0;cat ../menu-data/scratch.json | jq '[.[].name_json] | .en'
+: 1638401127:0;cat ../menu-data/scratch.json | jq '[.[].name_json] | .'
+: 1638401156:0;cat ../menu-data/scratch.json | jq '.[].name'
+: 1638401657:0;cd Code/delivery_first/deliverymenufirst-server
+: 1638401661:0;rg 'FETCHING LAYOUT FOR PRODUCT'
+: 1638401682:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-server/routes/commonFunctionsPromisified.js +2107
+: 1638402014:0;ls /opt/homebrew/Cellar/mongodb-community/5.0.3/README
+: 1638402018:0;cat /opt/homebrew/Cellar/mongodb-community/5.0.3/README
+: 1638402098:0;tail -h
+: 1638402103:0;tail --help
+: 1638402109:0;man tail
+: 1638402124:0;tail -f /Users/alexanderilseman/.mongodb/compass/61a7f0f7f0cb1a4e2f8bea99_log.gz
+: 1638402153:0;tail -f /Users/alexanderilseman/.mongodb/compass/
+: 1638402158:0;ls /Users/alexanderilseman/.mongodb/compass/
+: 1638402275:0;zgrep
+: 1638402575:0;zless /Users/alexanderilseman/.mongodb/compass/61a7f0f7f0cb1a4e2f8bea99_log.gz
+: 1638402588:0;zcat  /Users/alexanderilseman/.mongodb/compass/61a7f0f7f0cb1a4e2f8bea99_log.gz | tail -10
+: 1638402712:0;ls -la /Users/alexanderilseman/.mongodb/compass/
+: 1638402723:0;zless  /Users/alexanderilseman/.mongodb/compass/61a7f0f7f0cb1a4e2f8bea99_log.gz | tail -10
+: 1638403283:0;vars
+: 1638403333:0;env | mongo
+: 1638403338:0;env | grep mongo
+: 1638551527:0;cd ../first-android
+: 1638551535:0;cd deliverymenufirst-android/
+: 1638551541:0;vim readme.md
+: 1638551585:0;git add README.md
+: 1638551652:0;git checkout -b DFA-12/setup-app-locally
+: 1638551687:0;git restore --staged .idea/*
+: 1638551705:0;git commit -m 'Add readme'
+: 1638553746:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-server/database/index.js +
+: 1638566562:0;date
+: 1638566572:0;man date
+: 1638566626:0;date +%H
+: 1638566664:0;[ 1 ]
+: 1638566674:0;echo `[1]`
+: 1638566681:0;bash
+: 1638568248:0;bash work-hours.txt
+: 1638574779:0;mkdir archives
+: 1638574797:0;mv delivery-first-backend-core archives
+: 1638574818:0;git clone git@github.com:caxy/delivery-first-backend-core.git
+: 1638574828:0;cd delivery-first-backend-core/
+: 1638574867:0;git checkout -b DFA-30/sys-tracks-order-src
+: 1638574881:0;mv ../archives/delivery-first-backend-core/.env ./
+: 1638574963:0;ls server/lib/
+: 1638574978:0;ls server/modules/booking
+: 1638574985:0;vim server/modules/booking/README.md
+: 1638575158:0;curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
+: 1638575332:0;rg marketplace
+: 1638576123:0;cd reporting
+: 1638576144:0;cd repositories
+: 1638576158:0;vim bookingRepository.js
+: 1638576199:0;rg marketplaceJobId
+: 1638576203:0;nvim /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/reporting/services/bookingService.js +
+: 1638576656:0;rg WHERE
+: 1638577011:0;vim server/modules/booking/booking-controller.js
+: 1638577253:0;vim .
+: 1638577280:0;rg createBookingMarketplace
+: 1638577292:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-server/routes/commonFunctionsPromisified.js +
+: 1638579836:0;rg scheduleOrCreateTaskOnTookan
+: 1638581330:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-server/routes/marketplace.js +
+: 1638581421:0;cd deliverymenufirst-android
+: 1638581427:0;rg acceptRejectOrder
+: 1638581446:0;nvim /Users/alexanderilseman/Code/delivery_first/deliverymenufirst-android/app/src/main/java/com/tookancustomer/adapters/RequestAdapter.java +
+: 1638599191:0;cd ../core
+: 1638710909:0;mkdir Club
+: 1638710915:0;mkdir Alt
+: 1638710928:0;mkdir Pop
+: 1638711001:0;mkdir Classics
+: 1638711016:0;mkdir Other
+: 1638711164:0;mv /Volumes/T7/Audio/MainLibraryALAC/\(11\)\ \[Queen\]\ Bohemian\ Rhapsody.m4a Other
+: 1638805618:0;pwd | pbcopy
+: 1638806192:0;basename `pwd`
+: 1638806216:0;basename $(pwd)
+: 1638806220:0;basename "$(pwd)"
+: 1638806334:0;unzip *
+: 1638806346:0;uzip ./*
+: 1638806348:0;unzip ./*
+: 1638806362:0;unzip delivery_prod_12_06_21.zip 
+: 1638806378:0;unzip deliveryfirst-live-12-06-21.zip
+: 1638806411:0;rg delivery_prod_12_06_21.sql Database
+: 1638806419:0;rg Database
+: 1638806552:0;rm delivery_prod_12_06_21.sql
+: 1638806563:0;rm -rf deliveryfirst-live-12-06-21 
+: 1638806651:0;mysql -uroot -pQu7eFres1 deliverymenufirst < delivery_prod_12_06_21.sql
+: 1638806666:0;cd deliveryfirst-live-12-06-21
+: 1638806956:0;cd ~/Code/delivery_first
+: 1638806959:0;cd delivery-first-backend-core
+: 1638806981:0;node reporting online-orders -r megan@caxy.com
+: 1638807080:0;cat ../archives
+: 1638807087:0;ls ../archives
+: 1638807095:0;ls ../archives/delivery-first-backend-core/.env
+: 1638807098:0;cat ../archives/delivery-first-backend-core/.env
+: 1638807131:0;ls -la ..
+: 1638807141:0;ls -la .. .DS_Store
+: 1638807182:0;cat .env.example
+: 1638807209:0;echo MYSQL_URI='mysql://uname:passwrd@localhost/deliverymenufirst' >> .env
+: 1638807210:0;cat .env
+: 1638807261:0;cat reporting
+: 1638807266:0;cat reporting/reports
+: 1638807289:0;mkdir reporting/reports/weeklyOnlineOrderSummaries
+: 1638807295:0;node reporting online-orders -r alexander@caxy.com
+: 1638807439:0;mkdir /Users/alexanderilseman/Code/delivery_first/delivery-first-backend-core/reporting/reports/weeklyRestaurantSummaries
+: 1638807454:0;cd reporting/reports
+: 1638807850:0;cd data
+: 1638807861:0;cd Data
+: 1638807941:0;unzip /*.zip
+: 1638807946:0;unzip \*.zip
+: 1638807963:0;cd ..,
+: 1638808047:0;ls reporting
+: 1638808052:0;ls reporting/archives
+: 1638808058:0;ls reporting/reports
+: 1638808062:0;ls reporting/reports/weeklyOnlineOrderSummaries
+: 1638808389:0;node reporting restaurant-bookings -s '2021/9/27' -e '2021/10/03' --no-email
+: 1638809263:0;cd 12-06-21/ls
+: 1638809272:0;cd 12-06-21
+: 1638809315:0;cd mongo_dump_12_06_21
+: 1638809332:0;cd deliveryfirst-live
+: 1638809335:0;mongorestore --db=deliveryfirst . --drop
+: 1638809584:0;mysql -uroot -pQu7eFres1 deliverymenufirst < delivery_mysql_prod_12_06_21.sql
+: 1638809609:0;node reporting restaurant-bookings --no-email
+: 1638809708:0;node reporting online-orders --no-email
+: 1638813577:0;node reporting restaurant-bookings --no-email -s '11-29-21' -e '12-05-21'
+: 1638813624:0;node reporting online-orders --no-email -s '11-29-21' -e '12-05-21'
+: 1638813793:0;vim reporting/configuration.js
+: 1638819001:0;cd ~/Code/delivery_first/delivery-first-backend-core
+: 1638819015:0;rg processOrderEmail
+: 1638819758:0;cd ../delivery-first-backend-core
+: 1638819974:0;git commit -m 'DFA-30: Add orderSource attribute to records in bookings collection'
+: 1638820049:0;git checkout -b fix-auto-date-range
+: 1638820111:0;git commit -m 'tennitive fix for timezone issue in default date range'
+: 1638820147:0;git push --set-upstream origin fix-auto-date-range
+: 1638893553:0;softwareupdate --install-rosetta
+: 1638898872:0;mkdir crv
+: 1638898875:0;cd crv
+: 1638898903:0;mv crv crave_society
+: 1638898905:0;cd crave_society
+: 1638898922:0;open READ
+: 1638898923:0;open README.md
+: 1638898946:0;open .
+: 1638899223:0;n 14
+: 1638903983:0;npm install -g yalc
+: 1638904024:0;yalc publish
+: 1638904667:0;yarn
+: 1638904807:0;cat bin/lib-update
+: 1638904823:0;bin/lib-update
+: 1638906011:0;cd packages/services-lib && yarn install && yarn build && yalc push --private && cd ../../
+: 1638906110:0;docker-compose -h
+: 1638906148:0;docker-compose run -h
+: 1638906285:0;tree -n 2
+: 1638906289:0;tree -l 2
+: 1638906293:0;tree
+: 1638906297:0;tree --help
+: 1638906305:0;tree --help | grep level
+: 1638906314:0;tree -L 2
+: 1638906409:0;brew install broot
+: 1638906442:0;broot
+: 1638906470:0;source ~/.zshrc
+: 1638906472:0;br
+: 1638907108:0;bin/yarninstall
+: 1638907829:0;ls bin/yarninstall
+: 1638907831:0;cat bin/yarninstall
+: 1638907917:0;docker-compose run admin yarn install --pure-lockfile $@
+: 1638910213:0;vim docker-compose.yml
+: 1638910236:0;ls packages
+: 1638910366:0;yarn install --help
+: 1638910390:0;vim bin/yarninstall
+: 1638910488:0;cd ../api
+: 1638910509:0;cd gateway-api
+: 1638910513:0;yarn install --pure-lockfile
+: 1638911390:0;mysql -hdb -uroot -pQu7eFres1 -e "INSERT INTO cravesociety_app.app_user (id, email, first_name, last_name, password) VALUES ('11111111-1111-1111-1111-111111111111', 'admin@caxy.com', 'Caxy', 'Admin', '\$2a\$10\$1RvIfWWfdsrhgTPvHreeDebSNAbkvfyYFgQrU529NG8dznXgu24ly')"
+: 1638911495:0;mysqladmin create cravesociety_app --host=db --user=root --password=password
+: 1638912717:0;mysqladmin --help
+: 1638912729:0;vim bin/setup-db
+: 1638912785:0;mysqladmin create cravesociety_app --host=localhost --user=root --password=Qu7eFres1
+: 1638912796:0;vim bin/db-migrate
+: 1638912868:0;ls src/database
+: 1638913009:0;vim .env.dist
+: 1638913019:0;cp .env.dist .env
+: 1638913165:0;cat ../../bin/db-mig
+: 1638913167:0;cat ../../bin/db-migrate
+: 1638913446:0;mysql -uroot -pQu7eFres1 -e "INSERT INTO cravesociety_app.app_user (id, email, first_name, last_name, password) VALUES ('11111111-1111-1111-1111-111111111111', 'admin@caxy.com', 'Caxy', 'Admin', '\$2a\$10\$1RvIfWWfdsrhgTPvHreeDebSNAbkvfyYFgQrU529NG8dznXgu24ly')"
+: 1638916984:0;vim .env
+: 1638917003:0;npm start
+: 1638917133:0;vim src/graphql/types.ts
+: 1638917165:0;vim src/graphql/schema
+: 1638917191:0;vim src/graphql/schema/user/queries.ts
+: 1638920212:0;cd ../.
+: 1638920281:0;cat README.md | pbcopy
+: 1638984606:0;yarn remove
+: 1638984627:0;yarn remove @react-navigation/drawer
+: 1638984664:0;yarn add @react-navigation/drawer
+: 1638984785:0;expo install react-native-gesture-handler react-native-reanimated
+: 1638995613:0;brew install react-native-debugger
+: 1638995842:0;yarn global add react-devtools
+: 1638996778:0;expo start ==help
+: 1638996783:0;expo start --help
+: 1638996810:0;expo start -i --help
+: 1638997014:0;vim app.config.js
+: 1639003101:0;yarn add react-native-safe-area-context
+: 1639005068:0;yarn remove react-native-safe-area-context
+: 1639005113:0;expo install react-native-safe-area-context
+: 1639009829:0;open "rndebugger://set-debugger-loc?host=localhost&port=8081"
+: 1639022831:0;yarn add @types/styled-components-react-native -D
+: 1639032142:0;ls 
+: 1639040916:0;which react-native
+: 1639042177:0;ls npx pod install
+: 1639042880:0;ls assets
+: 1639047440:0;git checkout -b 'CRV-189/view-header-navigation'
+: 1639047781:0;git commit -m 'CRV-189: Rough draft of navigation header'
+: 1639077365:0;ls .expo
+: 1639077371:0;ls .expo -la
+: 1639077377:0;ls -la .expo -la
+: 1639079517:0;git commit =m 'CRV-189 Refined styling for nav header and behavior'
+: 1639079522:0;git commit -m 'CRV-189 Refined styling for nav header and behavior'
+: 1639093012:0;git commit -m 'Search icon brings user to the search page'
+: 1639114785:0;ls /tmp/
+: 1639124047:0;vim README.md
+: 1639169255:0;yarn add --dev tslint tslint-config-prettier tslint-config-standard tslint-react
+: 1639171843:0;vim run-cli.config.js
+: 1639171947:0;vim tslint.json
+: 1639172269:0;tslint --help
+: 1639172310:0;vim package.json 
+: 1639172382:0;node_modules/tslint/bin/tslint -e node_modules './**/*{ts,tsx}'
+: 1639172402:0;node_modules/tslint/bin/tslint  './**/*{ts,tsx}' -e ./node_modules/
+: 1639172408:0;node_modules/tslint/bin/tslint  './**/*{ts,tsx}' -e './node_modules/'
+: 1639172552:0;node_modules/tslint/bin/tslint  './**/*{ts,tsx}' 
+: 1639172566:0;node_modules/tslint/bin/tslint  --help
+: 1639172617:0;node_modules/tslint/bin/tslint  --config./.tslint.json
+: 1639172625:0;node_modules/tslint/bin/tslint  --config=./.tslint.json
+: 1639172652:0;node_modules/tslint/bin/tslint  --config="./.tslint.json"
+: 1639172658:0;node_modules/tslint/bin/tslint  -c "./.tslint.json"
+: 1639172665:0;node_modules/tslint/bin/tslint  -c "./.tslint.json" --project
+: 1639172671:0;node_modules/tslint/bin/tslint  -c "./.tslint.json" --project=.
+: 1639172716:0;vim .tslint.json
+: 1639172743:0;node_modules/tslint/bin/tslint  -c "./.tslint.json" "./**/*{ts,tsx}"
+: 1639172787:0;ls ../.. -la
+: 1639172795:0;ls -la  ../.. 
+: 1639172835:0;node_modules/tslint/bin/tslint  -c "./.tslint.json" "./components/**/*{ts,tsx}"
+: 1639172851:0;node_modules/tslint/bin/tslint  -c "./.tslint.json" "./{components, pages}/**/*{ts,tsx}"
+: 1639173000:0;cd react-native
+: 1639173356:0;nvim /Users/alexanderilseman/Code/crave_society/cravesociety-app/react-native/CraveSociety/components/NavigationBar.tsx +36
+: 1639173394:0;nvim /Users/alexanderilseman/Code/crave_society/cravesociety-app/react-native/CraveSociety/components/NavigationDrawer.tsx +22
+: 1639173425:0;node_modules/tslint/bin/tslint  -c "./.tslint.json" "./{components,pages}/**/*{ts,tsx}"
+: 1639173575:0;git stash pop apply
+: 1639173580:0;get stash pop
+: 1639173588:0;which gs
+: 1639180154:0;sudo kill -9 6493
+: 1639207229:0;git add package.json pages/Navigation.tsx
+: 1639207299:0;git checkout -b lint-and-format
+: 1639207327:0;git commit -m 'copied Nicole's lint stuff from her PR'
+: 1639207352:0;git commit -m 'copied Nicole\'s lint stuff from her PR'
+: 1639207365:0;git commit -m "copied Nicole's lint stuff from her PR"
+: 1639207591:0;git pull lint-and-format
+: 1639207649:0;git merge lint-and-format
+: 1639207793:0;eslint .
+: 1639241290:0;eslint . --ext .js,.jsx,.ts,.tsx
+: 1639242257:0;which node
+: 1639250642:0;git commit -m 'Cleaned up formatting and typing issues'
+: 1639271244:0;git commit -m 'CRV-189: rebased branch against latest develop'
+: 1639271284:0;git rebase --interactive
+: 1639274135:0;nvim /Users/alexanderilseman/Code/crave_society/cravesociety-app/react-native/CraveSociety/pages/Loading.tsx +
+: 1639274455:0;git pull 
+: 1639274460:0;nvim /Users/alexanderilseman/Code/crave_society/cravesociety-app/react-native/CraveSociety/pages/loginPage.tsx +
+: 1639274498:0;nvim /Users/alexanderilseman/Code/crave_society/cravesociety-app/react-native/CraveSociety/App.tsx +
+: 1639274563:0;git add --all 
+: 1639274576:0;git commit -m 'merge remote'
+: 1639274780:0;git commit -m 'fixed font loading mis-merge'
+: 1639276017:0;git restore --staged components/CraveLogo.tsx
+: 1639276733:0;git commit -m 'fixed logo placement on front login page'
+: 1639278701:0;gcmsg 'move colors into theme'
+: 1639279104:0;gcmsg 'move white into theme'
+: 1639283897:0;write com.apple.finder CreateDesktop false
+: 1639283903:0;killall Finder
+: 1639336412:0;echo file = '${file}' : workspaceFolder = '${workspaceFolder}'
+: 1639336633:0;echo file = '~/Library/Application Support/Code/User/keybindings.json' : workspaceFolder = '/Users/alexanderilseman/Code/crave_society/cravesociety-app/react-native/CraveSociety'
+: 1639336720:0;react-native run-ios --simulator --no-packager --verbose' (error code 101) (error code 303)
+: 1639336724:0;react-native run-ios --simulator --no-packager --verbose
+: 1639336771:0;/Users/alexanderilseman/Code/crave_society/cravesociety-app/react-native/CraveSociety/node_modules/.bin/react-native run-ios --simulator --no-packager --verbose
+: 1639336819:0;npx react-native run-ios
+: 1639336937:0;expo
+: 1639337141:0;npm install expo-cli -g
+: 1639337244:0;npm install expo --save-dev
+: 1639337572:0;echo file = '/Users/alexanderilseman/Code/crave_society/cravesociety-app/react-native/CraveSociety/.vscode/launch.json' : workspaceFolder = '/Users/alexanderilseman/Code/crave_society/cravesociety-app/react-native/CraveSociety'
+: 1639338377:0;yarn global add react-devtools\
+
+: 1639339635:0;brew install --cask react-native-debugger
+: 1639339651:0;react-native-debugger
+: 1639339775:0;npx react-native --version
+: 1639347084:0;git checkout -b CRV-196/create-restaurant-card
+: 1639407522:0;git add components/RestaurantCard.tsx
+: 1639407545:0;git commit -m 'CRV-196: Stubbed card layout'
+: 1639408905:0;git add components/Header/*
+: 1639408935:0;git commit -m 'CRV-189: Updated font size to use px calculation'
+: 1639410431:0;rm -f package-lock.json
+: 1639410450:0;git add yarn.lock
+: 1639410468:0;git stash -m 'package and lock updates'
+: 1639410506:0;git checkout CRV-189/view-header-navigation
+: 1639410943:0;git add pages/*
+: 1639410984:0;nvim /Users/alexanderilseman/Code/crave_society/cravesociety-app/react-native/CraveSociety/pages/searchPage.tsx +
+: 1639411011:0;git rebase --abourt
+: 1639411075:0;vim package
+: 1639411256:0;git add package.json
+: 1639411263:0;git add components/*
+: 1639411269:0;git addd App.tsx
+: 1639411272:0;git add App.tsx
+: 1639411305:0;vim components/AppHeader.tsx
+: 1639411338:0;git add pages/searchPage.tsx
+: 1639411368:0;git add pages/accountPage.tsx
+: 1639411441:0;alias ga='git add'
+: 1639411443:0;which ga
+: 1639411468:0;ga App.tsx
+: 1639411553:0;vim pages/Loading.tsx
+: 1639411558:0;ga pages/Loading.tsx
+: 1639411592:0;vim pages/discoveryPage.tsx
+: 1639411658:0;ga pages/discoveryPage.tsx
+: 1639412178:0;git add components/NavigationDrawer.tsx
+: 1639412279:0;vim pages/searchPage.tsx
+: 1639412312:0;ga pages/searchPage.tsx
+: 1639412318:0;vim pages/accountPage.tsx
+: 1639412329:0;ga pages/accountPage.tsx
+: 1639412367:0;vim pages/AvliPage.tsx
+: 1639412430:0;ga pages/AvliPage.tsx
+: 1639412525:0;vim components/CraveLogo.tsx
+: 1639412545:0;ga components/CraveLogo.tsx
+: 1639412710:0;git rm .prettierrc
+: 1639412720:0;vim .eslintrc.json
+: 1639412746:0;git add .eslintrc.json
+: 1639412796:0;vim pages/loginPage.tsx
+: 1639412840:0;ga pages/loginPage.tsx
+: 1639412847:0;vim pages/Navigation.tsx
+: 1639412860:0;ga pages/Navigation.tsx
+: 1639412869:0;vim components/NavigationDrawer.tsx
+: 1639412887:0;ga components/NavigationDrawer.tsx
+: 1639412975:0;git add .prettierrc
+: 1639416188:0;git add pages/Navigation.tsx
+: 1639416198:0;git diff --cached
+: 1639416422:0;git commit -m 'CRV-189: Removed use of spread op. when passing props'
+: 1639421706:0;git pull --help
+: 1639421734:0;git branch --help
+: 1639421762:0;git checkout origin/CRV-172/base-styles
+: 1639421831:0;git branch -d CRV-172/base-styles
+: 1639422022:0;git reset --hard origin/CRV-172/base-styles
+: 1639422101:0;mv cravesociety-app saved-cravesociety-app
+: 1639422107:0;git clone git@github.com:caxy/cravesociety-app.git
+: 1639422117:0;cd cravesociety-app/
+: 1639422495:0;yarn i
+: 1639422580:0;echo file = '/Users/alexanderilseman/Code/crave_society/cravesociety-app/react-native/CraveSociety/components/Containers/PageContainer.tsx' : workspaceFolder = '/Users/alexanderilseman/Code/crave_society/cravesociety-app/react-native/CraveSociety'
+: 1639422623:0;ls node_modules
+: 1639422762:0;cd Code/crave_society/cravesociety-app/react-native/CraveSociety/
+: 1639422954:0;mv cravesociety-app fresh-craveapp
+: 1639422963:0;mv saved-cravesociety-app cravesociety-app
+: 1639423044:0;git checkout origin/develop
+: 1639423079:0;cd ../fresh-craveapp
+: 1639423097:0;git restore react-native/CraveSociety/tsconfig.json
+: 1639423151:0;mv cravesociety-app/.git local-dotgit
+: 1639423172:0;cp  fresh-craveapp/.git cravesociety-app/.git
+: 1639423175:0;cp -r  fresh-craveapp/.git cravesociety-app/.git
+: 1639423222:0;git checkout CRV-172/base-styles
+: 1639426317:0;yarn seed:run
+: 1639426505:0;ls src/database/entities/Restaurant.ts
+: 1639426508:0;vim src/database/entities/Restaurant.ts
+: 1639426572:0;node_modules/typeorm-seeding/dist/cli.js
+: 1639426581:0;node node_modules/typeorm-seeding/dist/cli.js
+: 1639426592:0;node node_modules/typeorm-seeding/dist/cli.js seed
+: 1639426706:0;node_modules/ts-node/dist/bin.js 
+: 1639426726:0;node_modules/ts-node/dist/bin.js node_modules/typeorm-seeding/dist/cli.js seed
+: 1639428105:0;git branch -d CRV-196-create-restaurant-cards
+: 1639428137:0;git checkout -b CRV-196/create-restaurant-cards
+: 1639428172:0;cd local-dotgit
+: 1639428185:0;mkdir dotgit
+: 1639428194:0;mv local-dotgit dotgit
+: 1639428198:0;ls dotgit
+: 1639428220:0;cd dotgit/local-dotgit
+: 1639428226:0;cd objects
+: 1639428237:0;cd..
+: 1639428260:0;mv local-dotgit .git
+: 1639428313:0;ls react-native/CraveSociety
+: 1639428316:0;ls react-native/CraveSociety/components
+: 1639428346:0;cd Code/crave_society/cravesociety-app/
+: 1639428361:0;cd api/gateway-api/
+: 1639428367:0;cd src/graphql/
+: 1639428373:0;cd resolvers
+: 1639428385:0;mkdir restaurant
+: 1639428388:0;cd restaurant
+: 1639428395:0;ls ../user
+: 1639428408:0;vim ../user/index.ts
+: 1639428439:0;vim ../user/loginResolver.ts
+: 1639432197:0;git commit -m 'CRV-196:Initial effort at restaurant schema and resolvers'
+: 1639444338:0;git commit -m 'CRV-196: Functional POC for restaurant schema and resolver'
+: 1639510541:0;rm -rf node_modules
+: 1639511900:0;ls ~/.yalc/installations.json
+: 1639511904:0;cat ~/.yalc/installations.json
+: 1639511934:0;cat ~/.yalc/packages/@crv/services-lib/1.0.0/dist/database/entities/restaurant/Restaurant.d.ts
+: 1639512178:0;cat ~/.yalc/packages/@crv/services-lib/1.0.1/dist/database/entities/restaurant/Restaurant.d.ts
+: 1639513002:0;cd packages
+: 1639513070:0;yarn console
+: 1639513135:0;yarn migration:gen
+: 1639513181:0;neighborhoods for rest
+: 1639513201:0;yarn migration:gen -- restaurant-neighborhoods
+: 1639514339:0;yarn schema:sync
+: 1639515748:0;yarn migration:gen -- AssociateRestaurantsAndNeighborhoods
+: 1639530854:0;git commit -m 'CRV-196: Very rough restaurant card draft'
+: 1639545772:0;git add components/
+: 1639545808:0;git commit -m 'CRV-196: Images sized correctly and title text'
+: 1639534612:4854;react-devtools
+: 1639546648:0;ios
+: 1639573024:0;git commit -m 'CRV-196: Formatting and style'
+: 1639573143:0;mv api/gateway-api/src/console.ts ../
+: 1639573178:0;git commit -m 'CRV-196: Removed console file and package.json script'
+: 1639584995:0;git pull origin CRV-196/create-restaurant-cards
+: 1639585051:0;git reset --stagged react-native/CraveSociety/components/Containers/PageContainer.tsx
+: 1639585105:0;git diff 
+: 1639585143:0;git commit -m 'CRV-196: Removed comments per Nicole\'s request'
+: 1639585151:0;git commit -m "CRV-196: Removed comments per Nicole's request"
+: 1639585289:0;git checkout CRV-179/resturant-uploads
+: 1639585432:0;cd ../../admin
+: 1639586564:0;cp .env admin/
+: 1639586770:0;redis
+: 1639586775:0;brew install redis
+: 1639586848:0;brew services list
+: 1639586858:0;brew services start redis
+: 1639589761:0;npx tsc -p tsconfig.release.json
+: 1639590104:0;node ./build/src/app.js
+: 1639593804:0;which yarn start
+: 1639597968:0;	echo "$AWS_REGION"
+: 1639597975:0;	echo $AWS_REGION
+: 1639598199:0;vim tsconfig.release.json
+: 1639598214:0;node_modules/typescript/bin/tsc -p tsconfig.release.json
+: 1639598255:149;node build/src/app.js
+: 1639598888:0;cd ../../packages
+: 1639598890:0;cd services-lib
+: 1639598934:0;yalc update @crv/services-lib
+: 1639599036:0;rg east-2
+: 1639599045:0;rg region
+: 1639599201:0;echo $ENV
+: 1639599231:0;printenv
+: 1639599867:0;env
+: 1639599874:0;env |grep AWS
+: 1639600401:0;	cd ~
+: 1639600404:0;la
+: 1639600442:0;ls .config
+: 1639604119:0;git restore admin/*
+: 1639604123:0;git restore admin/**/*
+: 1639604145:0;git restore admin/src/adminjs/index.ts
+: 1639604157:0;git restore admin/src/*
+: 1639604226:0;git checkout -b CRV-195:navigate-discover-page
+: 1639604236:0;git checkout -b CRV-195/navigate-discover-page
+: 1639605482:0;cd ../react-native
+: 1639605486:0;cd CraveSociety
+: 1639605506:0;cd ~/.zprezto
+: 1639605546:0;ls modules
+: 1639605559:0;ls modules/prompt
+: 1639605563:0;ls modules/prompt/init.zsh
+: 1639605565:0;vim modules/prompt/init.zsh
+: 1639605574:0;vim init.zsh
+: 1639605957:0;nvim /Users/alexanderilseman/.zpreztorc +41
+: 1639605972:0;source ../.zshrc
+: 1639606079:0;source .zshrc
+: 1639606118:0;hi how is everything
+: 1639606141:0;vim .zprezto
+: 1639606172:0;source .zpreztorc
+: 1639606211:0;vim .zpreztorc
+: 1639606234:0;cd Code/crave_society
+: 1639606237:0;cd cravesociety-app
+: 1639606257:0;
+: 1639607140:0;yarn add react-native-snap-carousel
+: 1639607151:0;@types/react-native-snap-carousel
+: 1639607155:0;yarn add @types/react-native-snap-carousel
+: 1639609196:0;git commit -m 'DFA-195: Initial carousel setup'
+: 1639609202:0;git push --set-upstream origin CRV-195/navigate-discover-page
+: 1639609236:0;git checkout CRV-196/create-restaurant-cards
+: 1639609303:0;git add components/Containers/PageContainer.tsx
+: 1639609326:0;git commit -m 'CRV-196: Restored padding at bottom of screen'
+: 1639609329:0;pushd
+: 1639609424:0;git pull origin CRV-196/create-restaurant-cards --ff
+: 1639611454:0;cd Code/crave_society/cravesociety-app
+: 1639611463:0;man ln
+: 1639611511:0;ln -s ~/Code/crave_society/cravesociety-app ~/crave-app
+: 1639611755:0;/bin/pwd
+: 1639611768:0;/bin/pwd --help
+: 1639611771:0;/bin/pwd -h
+: 1639611774:0;/bin/pwd -L
+: 1639611778:0;/bin/pwd -P
+: 1639611787:0;pwd -P
+: 1639611791:0;which pwd
+: 1639611869:0;cd ../react-native/CraveSociety
+: 1639611884:0;yarn add eslint-plugin-react
+: 1639612815:0;mkdir .cache/custom_css
+: 1639612824:0;rmdir .cache/custom_css
+: 1639612833:0;mkdir .vscode/custom_css
+: 1639612835:0;ls .vscode
+: 1639612887:0;vim .vscode/custom_css/enlightenment.css
+: 1639612938:0;"${pwd}${ls .vscode/custom_css/enlightenment.css}"
+: 1639612962:0;"$(pwd)$(ls .vscode/custom_css/enlightenment.css)"
+: 1639612969:0;echo "$(pwd)$(ls .vscode/custom_css/enlightenment.css)"
+: 1639612977:0;echo "$(pwd)/$(ls .vscode/custom_css/enlightenment.css)"
+: 1639613080:0;ls "/Applications/Visual Studio Code.app/Contents/MacOS/Electron"
+: 1639613091:0;ls "/Applications/Visual Studio Code.app/Contents/MacOS/"
+: 1639613117:0;sudo chown -R $(whoami) "/Applications/Visual Studio Code.app/Contents/MacOS/Electron"
+: 1639622789:0;s
+: 1639701876:0;git commit -m 'CRV-195: Headline carousel with styled pagination'
+: 1639709514:0;echo "$(pwd)/$(ls .vscode/custom_css/enlightenment.css)" | pbcopy
+: 1639775730:0;git commit -m 'CRV-195: Added correct icons for discover components'
+: 1639777828:0;gcmsg 'CRV-195: Added touches to componenets of the restaurant view'
+: 1639778714:0;git commit -m 'CRV-195: Refined layout of discovery page`
+: 1639778718:0;git commit -m 'CRV-195: Refined layout of discovery page'
+: 1639783736:0;git checkout CRV-195/navigate-discover-page 
+: 1639787393:0;nvim /Users/alexanderilseman/crave-app/react-native/CraveSociety/components/Crave/CraveButton.tsx +
+: 1639789750:0;git checkout CRV-195/navigate-discover-page
+: 1639801655:0;brew install vv
+: 1639804955:0;cd eovim-0.2.0
+: 1639804958:0;mkdir -p build && cd build\
+cmake -DCMAKE_BUILD_TYPE=Release ..\
+cmake --build .\
+cmake --build . --target install # Possibly as root (i.e. via sudo)\
+
+: 1639804996:0;brew intall efl-devel 
+: 1639805002:0;brew install efl-devel 
+: 1639805059:0;brew install efl
+: 1639805082:0;brew update
+: 1639805161:0;brew install --build-from-source efl-devel
+: 1639805165:0;brew install --build-from-source efl
+: 1639876546:0;cd ~/crave-app
+: 1639876564:0;git log --author="fathergoose" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
+: 1639876577:0;git config user.name
+: 1639876580:0;git config user
+: 1639876592:0;git log --author="Al Ilseman" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
+: 1640026689:0;brew install ios-deploy
+: 1640026802:0;(npm install -g expo-cli
+: 1640026804:0;npm install -g expo-cli
+: 1640027000:0;arch -arm64 brew install watchman
+: 1640027136:0;which arch
+: 1640027140:0;arch --help
+: 1640027142:0;man arch
+: 1640027166:0;ls ~/Library/Android
+: 1640027169:0;ls ~/Library/Android/sdk
+: 1640027187:0;ls ~/Library/Android/sdk/build-tools
+: 1640027194:0;ls ~/Library/Android/sdk/tools
+: 1640027199:0;ls ~/Library/Android/sdk/tools/android
+: 1640027376:0;echo $ANDROID_HOME
+: 1640027386:0;echo $PATH
+: 1640027398:0;which android
+: 1640027537:0;ls ~/Library/Android/sdk/build-tools/31.0.0/lld-bin
+: 1640027777:0;ls ~/Library/Android/sdk/
+: 1640027781:0;ls ~/Library/Android/sdk/cmdline-tools
+: 1640027784:0;ls ~/Library/Android/sdk/cmdline-tools/latest/
+: 1640027796:0;ls ~/Library/Android/sdk/cmdline-tools/latest/bin
+: 1640027874:0;npx react-native doctor
+: 1640031096:0;export EXPO_DEVTOOLS_LISTEN_ADDRESS=172.20.10.4
+: 1640031121:0;export REACT_NATIVE_PACKAGER_HOSTNAME=172.20.10.4
+: 1640031145:0;expo start
+: 1640035738:0;rm svgs/src/PlaceholderImage.svg
+: 1640035804:0;git add --al;
+: 1640035821:0;git stash -m 'stub navigation typing'
+: 1640035894:0;git checkout -b CRV-229/restaurant-page-header
+: 1640038331:0;cd ../../react-native/CraveSociety
+: 1640106925:0;eslint . 
+: 1640121317:0;yarn starut
+: 1640187142:0;git diff --name-only develop
+: 1640187148:0;git diff --name-only CRV-193/export $(git merge-base CRV-193/export develop)
+: 1640187172:0;eslint admin/src/adminjs/components/Export/DownloadCSV.tsx\
+admin/src/adminjs/components/Export/Export.ts\
+admin/src/adminjs/components/Export/ExportButton.tsx\
+admin/src/adminjs/resources/user/user.ts
+: 1640187199:0;eslint src/adminjs/components/Export/*
+: 1640187243:0;eslint src/adminjs/components/Export/ExportButton.tsx
+: 1640187267:0;rg meta.docs
+: 1640187277:0;vim .eslintrc
+: 1640187575:0;cd crave-app
+: 1640187577:0;eslint  $(git diff --name-only HEAD | xargs)
+: 1640187582:0;$(git diff --name-only HEAD | xargs)
+: 1640187586:0;$(git diff --name-only HEAD )
+: 1640187595:0;$(git diff --name-only develop )
+: 1640187602:0;git diff --name-only develop 
+: 1640187637:0;git diff --name-only CRV-193/export
+: 1640187706:0;git checkout CRV-193/export
+: 1640187708:0;eslint $(git diff --name-only HEAD HEAD~1 | grep -E '\.(js|jsx)$' | xargs)
+: 1640188177:0;cd admin/
+: 1640188179:0;eslint `git diff --name-only CRV-193/export $(git merge-base CRV-193/export develop) | xargs`
+: 1640188250:0;eslint -c admin `git diff --name-only CRV-193/export $(git merge-base CRV-193/export develop) | xargs`
+: 1640188262:0;eslint -c admin/.eslintrc `git diff --name-only CRV-193/export $(git merge-base CRV-193/export develop) | xargs`
+: 1640188307:0;eslint -c admin/tsconfig.json `git diff --name-only CRV-193/export $(git merge-base CRV-193/export develop) | xargs`
+: 1640188357:0;eslint -c react-native/CraveSociety/.eslintrc.json `git diff --name-only CRV-193/export $(git merge-base CRV-193/export develop) | xargs`
+: 1640199112:0;git fetch
+: 1640207581:0;ls src/database/migrations
+: 1640212139:0;ls /usr/local
+: 1640212173:0;ln -s /usr/local/aws-cli/aws /usr/local/bin/aws
+: 1640212180:0;aws
+: 1640212274:0;aws configure
+: 1640212740:0;aws s3 list
+: 1640212748:0;aws s3 ls
+: 1640212782:0;aws s3 ls crave-assets-qa/38d4cf1c-feca-436a-98cf-fd2dad6564ae/
+: 1640212812:0;guid
+: 1640212820:0;uuid
+: 1640213163:0;ls Downloads/cira.jpeg
+: 1640213247:0;aws s3 put-object --bucket=crave-assets-qa --key="$(uuidgen)/cira.jpeg" --body=Downloads/cira.jpeg
+: 1640213261:0;aws help
+: 1640213306:0;aws s3 --help
+: 1640213312:0;aws s3 -h
+: 1640213333:0;aws s3
+: 1640213345:0;aws s3 putObject --bucket=crave-assets-qa --key="$(uuidgen)/cira.jpeg" --body=Downloads/cira.jpeg
+: 1640213552:0;aws s3 cp Downloads/cira.jpeg s3://crave-assets-qa/$(uuidgen)/cira.jpeg
+: 1640213599:0;aws s3 ls crave-assets-qa/AD68E50E-9AD2-4458-848B-AC2EC28E448E/
+: 1640213865:0;ls Downloads/scofflaw
+: 1640213871:0;ls Downloads/scofflaw-restaurant-1.png
+: 1640213876:0;ls -lah Downloads/scofflaw-restaurant-1.png
+: 1640213881:0;ls -lah Downloads/scofflaw.png
+: 1640213917:0;uuidgen --help
+: 1640213921:0;uuidgen -d
+: 1640213924:0;uuidgen -r
+: 1640213934:0;uuidgen -hdr
+: 1640213940:0;man uuid
+: 1640213951:0;lowercase
+: 1640213988:0;tr 37UU3JP
+: 1640213994:0;tr -d 37UU3JP
+: 1640214037:0;uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
+: 1640214045:0;uuidgen
+: 1640214073:0;uuidgen | tr "[:upper:]" "[:lower:]"
+: 1640214181:0;aws s3 cp Downloads/scofflaw.png s3://crave-assets-qa/C73A2D82-7B01-4651-A410-D042E2F436C1/scofflaw.jpeg
+: 1640214225:0;aws s3 cp Downloads/girlandthegoat.jpeg s3://crave-assets-qa/$(uuidgen)/girlandthegoat.jpeg
+: 1640214797:0;mysql  -uroot -pQu7eFres1 -dcravesociety_app
+: 1640214827:0;brew services restart mysql
+: 1640214840:0;mysql  -uroot -pQu7eFres1 
+: 1640214846:0;mysql --help
+: 1640215017:0;vim Code/scripts/cravedb.sql
+: 1640215042:0;mysql  -uroot -pQu7eFres1 -Dcravesociety_app < Code/scripts/cravedb.sql
+: 1640215075:0;cd crave-app/api/gateway-api
+: 1640215145:0;vim ~/Code/scripts/cravedb.sql
+: 1640215226:0;yarn schema:drop
+: 1640215250:0;mysql  -uroot -pQu7eFres1 -Dcravesociety_app < ~/nvim /Users/alexanderilseman/Code/scripts/cravedb.sql +Code/scripts/cravedb.sql
+: 1640215264:0;mysql  -uroot -pQu7eFres1 -Dcravesociety_app < ~/Code/scripts/cravedb.sql
+: 1640215484:0;cd ../../packages/services-lib
+: 1640215535:0;npm install
+: 1640218047:0;git commit -m 'CRV-229: Updated logic to handle images from the DB'
+: 1640233540:0;mysql  -uroot -pQu7eFres1 -e "INSERT INTO cravesociety_app.app_user (id, email, first_name, last_name, password) VALUES ('11111111-1111-1111-1111-111111111111', 'admin@caxy.com', 'Caxy', 'Admin', '\$2a\$10\$1RvIfWWfdsrhgTPvHreeDebSNAbkvfyYFgQrU529NG8dznXgu24ly')\
+"
+: 1640233573:0;mysql -uroot -pQu7eFres1 -e "INSERT INTO cravesociety_app.app_user (id, email, first_name, last_name, password, username) VALUES ('11111111-1111-1111-1111-111111111111', 'admin@caxy.com', 'Caxy', 'Admin', '\$2a\$10\$1RvIfWWfdsrhgTPvHreeDebSNAbkvfyYFgQrU529NG8dznXgu24ly', 'admin')"
+: 1640233581:0;mysql  -uroot -pQu7eFres1 -e "INSERT INTO cravesociety_app.app_users_permissions (user_id, permission_id) VALUES ('11111111-1111-1111-1111-111111111111', (SELECT id FROM cravesociety_app.permission WHERE slug = 'SUPERADMIN' LIMIT 1))"
+: 1640272257:0;prettier
+: 1640272259:0;eslint
+: 1640283711:0;git diff cfd7eaeed35b77c380030c629970958a96ab0674
+: 1640283750:0;git diff HEAD^ HEAD
+: 1640283765:0;git show
+: 1640283845:0;git diff 12de2f80f5c934ad389073f3253f7437231d5637
+: 1640283850:0;git diff 6758735c2fc3c75f2c65c130638a8a02f6f8a43b
+: 1640283873:0;git pull origin --rebase
+: 1640283920:0;git pull develop --rebase
+: 1640284079:0;vim react-native/CraveSociety/components/Headline/HeadlineOverlay.tsx
+: 1640284894:0;git reset --hard HEAD~
+: 1640284922:0;git push origin +CRV-229/restaurant-page-header
+: 1640284961:0;git pull develop
+: 1640293027:0;git rebase origin master
+: 1640293032:0;git rebase origin develop
+: 1640293047:0;git checkout CRV-229/restaurant-page-header
+: 1640293056:0;git pull origin develop --rebase
+: 1640293114:0;git commit -a
+: 1640293145:0;nvim /Users/alexanderilseman/crave-app/react-native/CraveSociety/components/NavigationDrawer.tsx +
+: 1640293171:0;git commit -m 'CRV-229: Fix merge'
+: 1640293600:0;git checkout -b CRV-229/Fix-error
+: 1640293607:0;rg >>
+: 1640293611:0;rg '>>'
+: 1640293641:0;gcmsg 'CRV-229: Fix missed merge conflict'
+: 1640293798:0;git checkout -b CRV-162/restaurant-detail-slider-navigation
+: 1640293803:0;git checkout  CRV-162/restaurant-detail-slider-navigation
+: 1640293827:0;cd packages/services-lib
+: 1640293846:0;cd admin
+: 1640293858:0;cd ../api/gateway-api
+: 1640714969:0;npm ls react-native-gesture-handler
+: 1640715111:0;expo install react-native-gesture-handler
+: 1640715215:0;vim .expo
+: 1640715610:0;fig app set-path
+: 1640718019:0;git stash -m 'attempted scroll and swipe'
+: 1640729913:0;gcmsg 'CRV-162: Scrolling possible in pan gstr. handler and clicking header scrolls the page'
+: 1640795470:0;git checkout -b CRV-110/user-profile-page
+: 1640795491:0;git push -u origin CRV-110/user-profile-page
+: 1640795610:0;git branch -m CRV-110/user-account-page
+: 1640795639:0;git push --delete origin CRV-110/user-account-page
+: 1640795650:0;git push --delete origin CRV-110/user-profile-page
+: 1640795659:0;git push origin -u CRV-110/user-account-page
+: 1640795685:0;git fetch origin --all
+: 1640805732:0;yarn add react-native-collapsible
+: 1640816834:0;git commit -m 'CRV-110: Basic working accordion on account page'
+: 1640824684:0;gcmsg 'CRV-110: Account page rough and nearly ready UI'
+: 1640832018:0;git add -all
+: 1640832121:0;gcmsg 'CRV-110: Crave logo for placeholder user account image'
+: 1640881712:0;git commit -m 'CRV-110: Corrected reference to account image placeholder'
+: 1640889072:0;git commit -m 'CRV-110: Backend for user query / mutation'
+: 1640889138:0;source ~/.zprofile
+: 1640892374:0;gcmsg 'CRV-110: Update user mutation working'
+: 1640900442:0;git add ../../api/gateway-api/src/graphql/resolvers/user/userInformationResolver.ts
+: 1640901383:0;git add ../../api/*
+: 1640901411:0;gcmsg 'CRV-110: Utilize pre-existing user service'
+: 1641072715:0;which pip
+: 1641072724:0;pip install pygame
+: 1641072733:0;cd code
+: 1641072733:0;l
+: 1641072742:0;vim games
+: 1641072746:0;mkdir games
+: 1641072748:0;cd games
+: 1641072804:0;mkdir first_pygame
+: 1641072809:0;cd first_pygame/
+: 1641074339:0;python -v
+: 1641074348:0;which python
+: 1641074354:0;python3
+: 1641074928:0;python3 game.py
+: 1641075032:0;vim game.py
+: 1641075172:0;:q
+: 1641075175:0;exit
+: 1641075378:0;/usr/local/bin/python3 /Users/alexanderilseman/Code/games/first_pygame/game.py
+: 1641076594:0;cd code/games/
+: 1641076599:0;git clone git@github.com:clear-code-projects/UltimatePygameIntro.git
+: 1641076615:0;python3 runner_video.py
+: 1641076697:0;python3 runner_class\ only.py
+: 1641076753:0;vim runner_class\ only.py
+: 1641076772:0;vim runner_video.py
+: 1641076821:0;cp audio ../first_pygame/
+: 1641076827:0;cp -r audio ../first_pygame/
+: 1641076831:0;cp -R audio ../first_pygame/
+: 1641076875:0;cp -R font/ ../first_pygame/
+: 1641076884:0;cp -R graphics/ ../first_pygame/
+: 1641076892:0;cd ../first_pygame/
+: 1641076909:0;rm -rf Fly/
+: 1641076912:0;rm -rf Player/
+: 1641076917:0;rm -rf Pixeltype.ttf
+: 1641076921:0;rm -rf Sky.png
+: 1641076928:0;rm -rf snail/
+: 1641076931:0;rm -rf ground.png
+: 1641076951:0;cd UltimatePygameIntro/
+: 1641076978:0;cp -r font ../first_pygame/font
+: 1641076982:0;ls ../first_pygame/
+: 1641131804:0;pip install pycodestyle
+: 1641132043:0;/usr/local/bin/python3 -m pip install -U flake8
+: 1641132092:0;pip install flake8
+: 1641132109:0;pip install black
+: 1641244237:0;cd ../../api/
+: 1641488505:0;git add -A
+: 1641488547:0;git stash -m 'editable text'
+: 1641492254:0;expo start --force-manifest-type=true
+: 1641493774:0;git checkout -
+: 1641591220:0;yarn start --ios
+: 1641833807:0;gcmsg 'CRV-110: Incomplete personal information form'
+: 1641834140:0;cd code/
+: 1641834166:0;expo init my-app
+: 1641834308:0;cd my-app/
+: 1641834316:0;vim App.tsx
+: 1641834404:0;cd assets/
+: 1641835401:0;git aa
+: 1641835415:0;gcmsg 'working text field and value data bind'
+: 1641835690:0;expo start --ios
+: 1642008780:0;cd ../crave-app
+: 1642008800:0;git commit -m 'CRV-110: Mutation not working'
+: 1642017793:0;gcmsg 'CRV-110: Basic error handling'
+: 1642019730:0;git commit -m 'CRV-110: Cleaned up logs and comments'
+: 1642021549:0;git checkout -b CRV-231/upload-profile-pic
+: 1642025416:0;cd ../../packages/
+: 1642025434:0;cd services-lib/
+: 1642026267:0;yarn run typeorm migration:
+: 1642026277:0;yarn run typeorm migration:revert
+: 1642026477:0;yarn build
+: 1642026501:0;yarn migration:gen -- AddProfileImageFieldsToUser
+: 1642026553:0;yarn migrate
+: 1642027430:0;aws s3 ls crave-assets-qa
+: 1642027460:0;aws s3 ls crave-assets-qa/f9ac8bb2-4676-4daa-991d-609f8c4da1d8/
+: 1642085402:0;gcmsg 'CRV-231: Setup db and service-lib for user profile images'
+: 1642090370:0;git stash push 
+: 1642090388:0;git stash pop
+: 1642090424:0;gcmsg 'CRV-110: Updates from code review'
+: 1642091032:0;git pull --rebase
+: 1642091245:0;git add react-native/CraveSociety/components/Restaurant/RestaurantCardCarousel.tsx
+: 1642091578:0;git commit
+: 1642092110:0;git commit -m 'CRV-110: Simplify toggle in account page'
+: 1642096258:0;git pull --rebase origin develop
+: 1642096987:0;git pull origin CRV-110/user-account-page
+: 1642097504:0;git reset --hard 97f557b662e81eea7cba013c777a2de76011d26b
+: 1642097535:0;git push origin HEAD --force
+: 1642097918:0;git commit -m 'CRV-110: Update account page conditional'
+: 1642097943:0;git fetch --all
+: 1642098724:0;git che
+: 1642098733:0;git checkout 
+: 1642098755:0;git checkout CRV-110/user-account-page
+: 1642098765:0;git log --graph --decorate --pretty=oneline --abbrev-commit
+: 1642098919:0;git rebase -i 003c4b9ba564532684a7a5d0e1b5b5610183aa7c
+: 1642099276:0;nvim /Users/alexanderilseman/crave-app/react-native/CraveSociety/components/Restaurant/RestaurantCardCarousel.tsx +
+: 1642100880:0;cd react-native/CraveSociety
+: 1642100885:0;vim .prettierrc
+: 1642101065:0;cd react-native/CraveSociety/
+: 1642101093:0;prettier components/ 
+: 1642101099:0;prettier -h components/ 
+: 1642101106:0;prettier -h 
+: 1642101313:0;git commit -m 'CRV-110: Add jsx single quote true to prettierrc and apply'
+: 1642105182:0;git stash list 
+: 1642105220:0;git checkout CRV-231/upload-profile-pic
+: 1642105385:0;git rebase -i develop
+: 1642105417:0;git rebase --abort
+: 1642105550:0;mkdir ../../save_crave
+: 1642105594:0;cp api/gateway-api/src/database/migrations/1642026502442-AddProfileImageFieldsToUser.ts ../../save_crave/
+: 1642105615:0;cp api/gateway-api/src/graphql/schema/user/inputs.ts ../../save_crave/
+: 1642105685:0;git branch -l
+: 1642105698:0;git branch -d CRV-231/upload-profile-pic 
+: 1642105724:0;git checkout -b CRV-231/upload-porfile-pic
+: 1642105804:0;cp ../../save_crave/1642026502442-AddProfileImageFieldsToUser.ts api/gateway-api/src/database/migrations/
+: 1642105827:0;vim ../../save_crave/user.ts
+: 1642106710:0;cat ../../save_crave/inputs.ts
+: 1642106739:0;cat ../../save_crave/user.ts
+: 1642106746:0;ls ../../save_crave/
+: 1642106755:0;rm -rf ../../save_crave/
+: 1642106758:0;git statsu
+: 1642106957:0;git commit -m 'CRV-231: Init, add fields to user model'
+: 1642107007:0;git push --force --set-upstream origin CRV-231/upload-porfile-pic
+: 1642108981:0;cd api/gateway-api
+: 1642108989:0;yarn add yarn add @aws-sdk/client-s3
+: 1642114220:0;node -v
+: 1642117593:0;cd ~/Download
+: 1642117600:0;cd ~/Downloads
+: 1642117606:0;cat SmilyFace.png
+: 1642117896:0;cd ../Documents
+: 1642118806:0;/Users/alexanderilseman/.n/bin/node -v
+: 1642119309:0;vim ~/.zprofile
+: 1642119323:0;vim ~/.zshrc
+: 1642119661:0;aws s3 ls crave-assets-qa/2ba24916-698f-11ec-a315-3b2b263fcb3b/ec395f83-1c51-47d1-b9e8-fd462a669765.jpeg
+: 1642119671:0;aws s3 ls crave-assets-qa/
+: 1642119698:0;2ba24916-698f-11ec-a315-3b2b263fcb3b/ec395f83-1c51-47d1-b9e8-fd462a669765.jpeg
+: 1642119714:0;aws s3 ls crave-assets-qa/2ba24916-698f-11ec-a315-3b2b263fcb3b/
+: 1642119961:0;âƒ½¯ gcmsg 'CRV-231: Backend functional uploads to s3'
+: 1642119971:0;gcmsg 'CRV-231: Backend functional uploads to s3'
+: 1642119973:0;push
+: 1642120084:0;git push --force
+: 1642126216:0;expo install expo-image-picker\
+
+: 1642126507:0;cd ../../api/gateway-api
+: 1642129883:0;expo install expo-file-system
+: 1642136261:0;yarn add eslint-plugin-better-styled-components
+: 1642137298:0;cd ../../api/gateway-api/
+: 1642180290:0;git add --all
+: 1642180328:0;git stash -m 'CRV-231: Attempted typedi injection of s3 service'
+: 1642182352:0;git rebase ec937838b8ffc7c2477b5dc6fd3fb686bd3d9b4a
+: 1642182365:0;git rebase -i  ec937838b8ffc7c2477b5dc6fd3fb686bd3d9b4a
+: 1642182426:0;git fetch origin develop
+: 1642182436:0;git pull
+: 1642182444:0;git checkout CRV-231/upload-porfile-pic
+: 1642182447:0;git rebase develop
+: 1642182459:0;cd ../...
+: 1642182461:0;cd ../..
+: 1642182571:0;git rebase --continue
+: 1642183090:0;cd gateway-api/
+: 1642183105:0;cd ../../react-native/CraveSociety/
+: 1642192043:0;expo install expo-camera
+: 1642192135:0;yarn ios
+: 1642197921:0;gcmsg 'CRV-231: Allow users to upload images from library or take photo with camera/
+: 1642197923:0;gcmsg 'CRV-231: Allow users to upload images from library or take photo with camera'
+: 1642197925:0;git push
+: 1642198670:0;git log
+: 1642198697:0;git rebase -i a6f05877f308b091c2b0d2bcb71f8fafe61e3109
+: 1642198815:0;git rebase -i Backend functional uploads to s3
+: 1642198825:0;git rebase -i e3654fff55158ead099a7d76856357c068f670b4
+: 1642198842:0;git rebase -i HEAD~2
+: 1642198876:0;git push -f
+: 1642201976:0;vim saveLocalConfig.ts
+: 1642202007:0;mkdir Code/scripts/backup/
+: 1642202032:0;cd Code/scripts/backup/
+: 1642202116:0;yarn add typescript
+: 1642202137:0;npx tsc --init
+: 1642202272:0;mkdir dist
+: 1642202513:0;npx tsc src/app.ts
+: 1642202519:0;ls dist
+: 1642202803:0;ls src
+: 1642202806:0;ls src/app.js
+: 1642202866:0;vim src/app.js
+: 1642202890:0;npx tsc src/app.ts 
+: 1642209518:0;yarn add eslint
+: 1642209766:0;vim .eslintrc.js
+: 1642210111:0;npx eslint --init
+: 1642211054:0;yarn add @types/node
+: 1642211206:0;npx tsc src/index.ts
+: 1642211280:0;npx tsc
+: 1642213503:0;yarn add ts-node
+: 1642213608:0;tsx ts-node src
+: 1642213613:0;npx ts-node src
+: 1642213639:0;pwd
+: 1642214653:0;yarn add --dev ts-node/register
+: 1642214688:0;yarn add --dev @types/node
+: 1642214693:0;yarn add --dev typescript
+: 1642214699:0;yarn add --dev ts-node
+: 1642257558:0;cd
+: 1642257566:0;cd code/scripts/backup
+: 1642257570:0;cd ../../
+: 1642257596:0;cp scripts/backup ./test-ts
+: 1642257609:0;cp -R scripts/backup ./test-ts
+: 1642257650:0;rm -rf node_playground/*
+: 1642257658:0;rm -rf node_playground/.*
+: 1642257664:0;cd node
+: 1642257669:0;cd node_playground
+: 1642301799:0;cd ../../node_playground/
+: 1642301811:0;yarn --init
+: 1642301819:0;ls node_modules/
+: 1642301924:0;mkdir src
+: 1642302009:0;yarn starrt
+: 1642302025:0;yarn run
+: 1642302081:0;node ./src
+: 1642302148:0;yarn add express
+: 1642302421:0;vim src/app.ts
+: 1642302473:0;vim src/index.js
+: 1642302477:0;node .
+: 1642302939:0;rm -rf src
+: 1642302973:0;yarn add -D express-generator-typescript
+: 1642303056:0;npx express-generator-typescript "tasktivities_api" 
+: 1642303069:0;rm -rf tasktivities_api/
+: 1642303124:0;npx express-generator-typescript --use-yarn "tasktivities_api" 
+: 1642303184:0;ls tasktivities_api/
+: 1642303217:0;mv node_playground/ tasktivities
+: 1642303239:0;gaa=
+: 1642303258:0;gcmsg 'Init - generated api'
+: 1642303263:0;mv tasktivities_api/ api
+: 1642303359:0;git diff
+: 1642303385:0;vim src/daos/MockDb/MockDb.json
+: 1642303411:0;..
+: 1642303675:0;cat package.json
+: 1642305078:0;n lts
+: 1642305956:0;mv api ../tasktivities_api
+: 1642305959:0;cd ../tasktivities
+: 1642305962:0;cd ../tasktivities_api
+: 1642306061:0;npm install -g typescript
+: 1642306070:0;npm install -g ts-node
+: 1642306109:0;mv tasktivities_api tasktivities/api
+: 1642306116:0;ls tasktivities/api/
+: 1642306126:0;code tasktivities/tasktivities.code-workspace
+: 1642306277:0;typescript
+: 1642306308:0;tsc
+: 1642306314:0;ts-node
+: 1642306848:0;cd api/
+: 1642306850:0;node -r ts-node/register --help
+: 1642306877:0;node -r ts-node/register --help | grep project
+: 1642306891:0;node -r ts-node/register --help | grep tsconfig
+: 1642306895:0;node -r ts-node/register --help | grep config
+: 1642306927:0;node -r ts-node/register -- -h
+: 1642306944:0;node -r ts-node/register src
+: 1642306990:0;node -r ts-node/register -- src
+: 1642307996:0;ls api -la
+: 1642308077:0;vim api/.eslintrc.js
+: 1642308176:0;curl localhost:3000/
+: 1642308179:0;curl localhost:3000/Users
+: 1642308190:0;curl localhost:3000/api/users
+: 1642308521:0;curl localhost:3000/Users/all
+: 1642308546:0;curl localhost:3000/users/all
+: 1642308609:0;curl localhost:3000/users/all -H "Content-Type:\ application/"
+: 1642308623:0;curl localhost:3000/users/all -H Content-Type:\ application/json
+: 1642308630:0;curl localhost:3000/users/all -H "Content-Type:\ application/json"
+: 1642308644:0;curl localhost:3000/users/all -H "Accept: application/json"
+: 1642308819:0;yarn run start:dev
+: 1642308825:0;curl localhost:3000/api/users/all -H "Accept: application/json"
+: 1642314555:0;yarn add -d prettier
+: 1642314580:0;yarn add --dev prettier
+: 1642314795:0;yarn add --dev prettier-eslint
+: 1642314962:0;yarn add --dev @typescript-eslint/parser
+: 1642315459:0;git --ammend
+: 1642315484:0;git commit --ammend
+: 1642315486:0;git commit --amend
+: 1642316261:0;yarn lint
+: 1642318162:0;yarn --version
+: 1642318328:0;mv ../notApi ../
+: 1642318333:0;mv ../notApi/ ../
+: 1642318338:0;mv ../notApi/* ../
+: 1642318344:0;ls ../..
+: 1642318356:0;rmdir ../notApi
+: 1642318358:0;ls ..
+: 1642319046:0;eslint --help
+: 1642319263:0;yarn run lint
+: 1642341793:0;rm -rf .*/** */**
+: 1642341799:0;rm -rf .
+: 1642341817:0;rm -rf api/*
+: 1642341829:0;ls -la api
+: 1642341842:0;rm -rfd api/.vscode
+: 1642341878:0;rm -rf tasktivities/*
+: 1642341884:0;rm -rf tasktivities/.*
+: 1642341888:0;cd tasktivities/
+: 1642342104:0;mkdir api
+: 1642342106:0;cd api
+: 1642342138:0;npm install -g yarn
+: 1642342168:0;cd code/tasktivities/api
+: 1642342172:0;yarn init
+: 1642342378:0;yarn add express express-graphql mongoose
+: 1642342424:0;yarn add -D nodemon
+: 1642342870:0;yarn add -D typescript ts-node
+: 1642343027:0;yarn add -D @types/node@16 @types/express@4
+: 1642345842:0;yarn add graphql\
+
+: 1642351095:0;yarn add type-graphql reflect-metadata graphql express class-validator apollo-server-express apollo-server-core mongoose @typegoose/typegoose
+: 1642351167:0;yarn add types/express @types/node typescript ts-node nodemon -D
+: 1642356283:0;yarn add -D ts-node-dev
+: 1642356386:0;git init
+: 1642356391:0;gaa .DS_Store
+: 1642356400:0;git rm .DS_Store
+: 1642356412:0;git reset -- .DS_Store
+: 1642356424:0;vim .gitignore
+: 1642356440:0;gs
+: 1642356454:0;gcmsg 'Init api with schema'
+: 1642356462:0;tsc --init
+: 1642356494:0;mv tsconfig.json api
+: 1642356912:0;node
+: 1642362206:0;yarn add -D babel-cli babel-preset-env babel-preset-stage-0 @types/node
+: 1642362223:0;yarn add apollo-server-express express graphql mongodb mongoose nodemon
+: 1642371662:0;yarn add -D @types/express
+: 1642371724:0;yarn add --dev @types/express
+: 1642371825:0;npm install --save-dev @types/express
+: 1642371850:0;yarn autoclean
+: 1642371872:0;cd ../
+: 1642371878:0;cd tasktivities/api
+: 1642371885:0;which yarn
+: 1642372230:0;cd Code/tasktivities/api
+: 1642372252:0;yarn add apollo-server
+: 1642372330:0;npx ts-node --respawn --transpile-only src/App.ts
+: 1642372340:0;npx ts-node --transpile-only src/App.ts
+: 1642372354:0;npx ts-node --transpile-only src
+: 1642372362:0;npx ts-node --transpile-only src/App
+: 1642372562:0;node --loader ts-node/esm ./my-script.ts\
+
+: 1642372570:0;node --loader ts-node/esm ./src/app.ts\
+
+: 1642372614:0;tsc build
+: 1642372640:0;tsc src/app.ts
+: 1642372714:0;cat ../../crave_society/cravesociety-app/api/gateway-api/package.json
+: 1642372776:0;cat ../../crave_society/cravesociety-app/api/gateway-api/tsconfig.json
+: 1642373200:0;npx ts-node-dev --respawn --transpile-only src/App.ts
+: 1642373359:0;npx ts-node-dev src/App.ts
+: 1642373401:0;npx ts-node-dev -h
+: 1642373409:0;npx ts-node-dev --help
+: 1642373439:0;npx ts-node src/App.ts
+: 1642373542:0;npx ts-node
+: 1642373567:0;vim tsconfig.json
+: 1642373716:0;vim package.json
+: 1642377725:0;git status
+: 1642377761:0;gcmsg 'Working Items graph'
+: 1642377824:0;git remote add origin git@github.com:fathergoose/tasktivities_api.git\
+git branch -M main\
+git push -u origin main
+: 1642377874:0;git remote delete origin
+: 1642377882:0;git remote rm origin
+: 1642377890:0;git remote add origin git@github.com:fathergoose/tasktivities.git\
+git branch -M main\
+git push -u origin main
+: 1642379998:0;npm install -g create-react-app
+: 1642380023:0;npm audit
+: 1642380032:0;npm audit -g
+: 1642380081:0;npx create-react-app tasktivities_web
+: 1642380203:0;cd ..
+: 1642380207:0;rm -rf tasktivities_web
+: 1642380252:0;yarn create react-app tasktivities_web --template typescript
+: 1642380299:0;cd 
+: 1642380304:0;cd ta
+: 1642380307:0;cd tasktivities_web
+: 1642380339:0;code .
+: 1642380353:0;ls -la
+: 1642381454:0;yarn add -D styled-componenets
+: 1642381463:0;yarn add -D styled-components
+: 1642381551:0;yarn remove styled-components
+: 1642381560:0;yarn add  styled-components
+: 1642381577:0;yarn -D @types/styled-components
+: 1642381590:0;yarn add -D @types/styled-components
+: 1642382958:0;yarn add @apollo/client graphql
+: 1642384563:0;cd ../api/
+: 1642384564:0;ls
+: 1642384905:0;gaa
+: 1642384934:0;gcmsg 'used create react app and connected to api'
+: 1642384943:0;git push 
+: 1642390325:0;npx ts-node .
+: 1642441099:0;git checkout develop
+: 1642441103:0;git pull origin develop
+: 1642441261:0;n
+: 1642441298:0;yarn start
+: 1642441306:0;yarn run start
+: 1642441318:0;yarn run ios
+: 1642441750:0;yarn run typeorm migration
+: 1642441786:0;cd ../../packages/services-lib/
+: 1642441812:0;yarn run build
+: 1642441819:0;yalc publish --private
+: 1642441823:0;cd -
+: 1642441832:0;yalc add @crv/services-lib
+: 1642441835:0;yarn install
+: 1642441845:0;yarn run typeorm migration:run
+: 1642442376:0;mysql
+: 1642442379:0;sql
+: 1642442382:0;mysql
+: 1642442391:0;mysql  -uroot -pQu7eFres1 
+: 1642442447:0;yarn run typeorm migration:run
+: 1642442478:0;cd ../../../../scripts/
+: 1642442479:0;ls
+: 1642442489:0;mysql  -uroot -pQu7eFres1 -Dcravesociety_app < Code/scripts/cravedb.sql
+: 1642442495:0;mysql  -uroot -pQu7eFres1 -Dcravesociety_app < cravedb.sql
+: 1642442512:0;vim cravedb.sql
+: 1642443426:0;cd ~/Code/scripts
+: 1642443428:0;ls
+: 1642443431:0;vim cravedb.sql
+: 1642443841:0;ls
+: 1642443975:0;vim .zshrc
+: 1642443998:0;cd code
+: 1642444002:0;mkdir dotfiles
+: 1642444004:0;cd dotfiles/
+: 1642444014:0;cp ~/.zlogin ./
+: 1642444021:0;cp ~/.* ./

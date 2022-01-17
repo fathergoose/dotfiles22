@@ -1,0 +1,232 @@
+'alexander'.replaceAll('a','A')
+'alex'.replaceAll('a','A')
+thousand + 1
+const thousand = 1_000
+x &&= y
+x ||= y
+let y = 'al'
+let y = 'al
+let x = 'hi'
+'' ?? 'no'
+b64
+let b64 = face.toString('base64');
+face = fs.readFileSync('SmilyFace.jpg');
+fs.readdirSync('.');
+face = fs.readFileSync('./SmilyFace.jpeg');
+const fs = require('fs')
+fs.readdirSync('.');
+fs.readadirSync('.');
+process.cwd()
+fs.pwd
+face = fs.readFileSync('./SmilyFace.jpeg');
+let face = fs.readFileSync('./SmilyFace.jpeg');
+let face = await fs.readFile('./SmilyFace.jpeg');
+let face = fs.read('./SmilyFace.jpeg');
+const fs = require('fs')
+crypto.randomUUID()
+myO.nonsense?.bad.bad.worst()
+myO.nonsense?.bad.bad.worst
+myO.nonsense?.bad
+myO.nonsense.bad
+myO.nonsense
+const myO.nonsense
+const myO = { prop: 'propertyValue' };
+.exit
+exit
+const 🍔 = () => console.log('yum')
+function 🍔() { }
+function burger() {}
+function 🍔() { console.log(🤤) }
+'' || 'no'
+'hi' || 'no'
+'hi' 
+[][0]?.prop ?? 'alex'
+if ([][0].prop) console.log('hi')
+if ([][0]?.prop) console.log('hi')
+if ([][0]?.prop) console.log('hi)
+if ([][0].prop) console.log('hi')
+if ([1][0]) console.log('hi')
+if ([][0]) console.log('hi')
+[][0]
+exit
+new Date('2021-12-06').getTimezoneOffset()
+360 / 60
+360 / 6
+new Date('12-06-21').getTimezoneOffset()
+new Date('12-06-21').getTimeZoneOffset()
+Date.getTimeZoneOffset()
+new Date('12-06-21')
+new Date('2021-12-06')
+sam
+const sam = new Date('11-26-21')
+end
+const end = new Date()
+const config = require('./reporting/configuration.js');
+parseCurrencyString('$1.20')
+  }
+    return Number(currency.replace(/[^0-9.-]+/g, ''));
+  function parseCurrencyString(currency) {
+getColID(8)
+}
+return String.fromCharCode(i+64);
+function getColID(i) {
+  }
+    return String.fromCharCode(index + 64);
+  static getColumnCharForIndex(index) {
+String.fromCharCode(65)
+String.fromCharCode(ascii_code)
+'ABCD'.charCodeAt(2)
+'ABCD'.charCodeAt(1)
+'ABCD'.charCodeAt(0)
+'abcd'.charCodeAt(1)
+'abcd'.charCodeAt(0)
+dd.getDay()
+const dd = new Date(someday)
+someday.getDay()
+someday
+const someday = today.setDate(today.getDate())
+today.setDate(today.getDate() + 2)
+today.getDay()
+today.setDate(today.getDate() - 1)
+today.getDay()
+today.getDate()
+today.setDate(today.getDate() - 1)
+today.getDay()
+today.getDate()
+const today = new Date();
+10 * 0.01
+exit
+arr[2] === ""
+arr[2] === ''
+arr.push(``)
+arr[1] === ''
+arr.push("")
+arr[0] === ""
+const arr = ['']
+path.dirname(path.join(process.cwd(), './reporting/reports'))
+path.basename(path.join(process.cwd(), './reporting/reports'))
+path.join(process.cwd(), './reporting/reports')
+path.join(process.cwd(), ./reporting/reports)
+exit
+dsvc.send();
+let dsvc = require('./reporting/reportDeliveryService');
+const ds = require('./reporting/reportDeliveryService');
+exit
+fs.readFile('')
+__dirname
+process.cwd()
+exit
+t.getDate()
+t.getDate
+t.setDate(32)
+t.getDate()
+t.toString();
+t = new Date()
+today.toString()
+today.getDate()
+today.setDate(35)
+today.getDate()
+today.setDate(35)
+today.getDate()
+today.setDate(32)
+today.setDate(32).getDate();
+today.setDate(32);
+today = new Date()
+d = new Date('11/11/21') 
+mycfg
+let mycfg = new Config({startDate: '9/11/21'});
+};
+  }
+    });
+      this[key] = this[key] || config[key];
+    Object.keys(config).forEach((key) => {
+    this.endDate = endDate || config.endDate;
+    this.startDate = startDate || config.startDate;
+  constructor({ startDate, endDate }) {
+class Config {
+config
+const config = require('./reporting/reportConfig.json');
+exit
+};
+  }
+    });
+      this[key] = this[key] || config[key];
+    Object.keys(config).forEach((key) => {
+    this.endDate = endDate || config.endDate;
+    this.startDate = startDate || config.startDate;
+  constructor({ startDate, endDate }) {
+class Config {
+const mycfg = new Config('9/11/21')
+config = require('./reporting/reportConfig.json');
+config
+};
+  }
+    });
+      this[key] = this[key] || config[key];
+    Object.keys(config).forEach((key) => {
+    this.endDate = endDate || config.endDate;
+    this.startDate = startDate || config.startDate;
+  constructor({ startDate, endDate }) {
+class Config {
+this = Object.assign(this, config);
+this.name = 'ilseman';
+constructor() {
+class cc {
+this.name = 'alexander';
+class cc {
+const conf = {opt: true, altopt: 17, name: 'alex'}
+test(-1, 'taco')
+test(0, 'taco')
+test(false, 'taco')
+test(null, 'taco')
+test()
+}
+return a || b || 'val';
+function test(a,b) {
+function test(a) {
+test()
+}
+return  a || 'value';
+function test(a) {
+test()
+}
+const mv = a || 'value';
+function test(a) {
+const myv = novar || 'hi'
+myA.map(i => myFunc(i))
+myA.map(myFunc)
+myA.map(i => myFunc)
+function myFunc(phrase) { console.log(phrase) }
+myA.map(i => console.log(i))
+myA.map(console.log)
+myA = ['taco', 'pizza', 'icecream']
+me.sayHello()
+me = new Me()
+new Me()
+}
+constructor() {}
+_sayHello() { console.log('hial') }
+sayHello() { this._sayHello() }
+class Me {
+objA[0].keys
+objA[0].keys()
+objA[0]['prop']
+objA = [{prop: 4},{prop:1},{prop:3}]
+[{prop: 4},{prop:1},{prop:3}].reduce((total, val) => total + val.prop, 0)
+[{prop: 4},{prop:1},{prop:3}].reduce((total, val) => total + val.prop)> console.log(i))
+myA.map(console.log)
+myA = ['taco', 'pizza', 'icecream']
+me.sayHello()
+me = new Me()
+new Me()
+}
+constructor() {}
+_sayHello() { console.log('hial') }
+sayHello() { this._sayHello() }
+class Me {
+objA[0].keys
+objA[0].keys()
+objA[0]['prop']
+objA = [{prop: 4},{prop:1},{prop:3}]
+[{prop: 4},{prop:1},{prop:3}].reduce((total, val) => total + val.prop, 0)
+[{prop: 4},{prop:1},{prop:3}].reduce((total, val) => total + val.prop)

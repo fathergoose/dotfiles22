@@ -1,0 +1,1 @@
+/Users/alexanderilseman/.fig/shell/pre.fish
